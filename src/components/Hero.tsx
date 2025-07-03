@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { parseMarkdownText } from '../utils/parseMarkdown';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
@@ -85,7 +86,7 @@ const Hero: React.FC = () => {
                     {t.hero.aboutTitle}
                   </h2>
                   <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {t.hero.aboutText}
+                    {parseMarkdownText(t.hero.aboutText)}
                   </p>
                 </div>
               </div>

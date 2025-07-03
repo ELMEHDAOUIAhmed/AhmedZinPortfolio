@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { parseMarkdownText } from '../utils/parseMarkdown';
 
 const Experience: React.FC = () => {
   const { language } = useLanguage();
@@ -154,7 +155,7 @@ const Experience: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 sm:mb-3 text-sm sm:text-base">
-                        {exp.company}
+                        {parseMarkdownText(exp.company)}
                       </p>
                       <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
                         {exp.description}

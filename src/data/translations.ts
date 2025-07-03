@@ -19,7 +19,7 @@ export const translations = {
       ],
       aboutTitle: 'About Me',
       aboutText:
-        "Software engineering student pursuing a Master's in Software Engineering at USTHB. Specialized in backend development with GoLang and mobile development with Flutter. Currently working on a project developing a mobile driving license (mDL) solution with HB Technologies SPA, alongside smart IoT system development.",
+        "Software engineering student pursuing a Master's in **Software Engineering** at **USTHB**. Specialized in backend development with GoLang and mobile development with Flutter. Currently working on a project developing a mobile driving license **(mDL)** solution with **HB Technologies SPA**, alongside smart IoT system development.",
       buttons: {
         previewCV: 'Preview CV',
         downloadCV: 'Download CV',
@@ -35,7 +35,7 @@ export const translations = {
         {
           id: '1',
           title: 'Mobile Driving License (mDL)',
-          company: 'Hb Technologies SPA',
+          company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
             'Designed and developed a digital driving license solution compliant with the ISO 18013-5 standard. The system comprised two mobile applications—one for license holders and one for verifiers—alongside an issuing authority platform, all built using a microservices architecture. The backend was developed in GoLang, mobile interfaces in Flutter, and facial recognition in Python. The infrastructure leveraged Public Key Infrastructure (PKI) for secure key management and data integrity, with Redis used for fast and secure storage of cryptographic keys.',
@@ -290,7 +290,7 @@ export const translations = {
       ],
       aboutTitle: 'À Propos de Moi',
       aboutText:
-        "Étudiant passionné en ingénierie logicielle poursuivant un Master en Ingénierie de Logiciels à l'USTHB. Spécialisé dans le développement mobile avec Flutter, le développement backend avec GoLang, et les solutions IoT. Actuellement en train de travailler sur des projets de pointe incluant des solutions de permis de conduire mobile (mDL) et des systèmes IoT intelligents.",
+        "Étudiant passionné en ingénierie logicielle poursuivant un Master en **Ingénierie de Logiciels** à l'**USTHB**. Spécialisé dans le développement mobile avec Flutter, le développement backend avec GoLang, et les solutions IoT. Actuellement en train de travailler sur des projets de pointe incluant des solutions de permis de conduire mobile **(mDL)** avec **HB Technologies SPA** et des systèmes IoT intelligents.",
       buttons: {
         previewCV: 'Aperçu CV',
         downloadCV: 'Télécharger CV',
@@ -306,7 +306,7 @@ export const translations = {
         {
           id: '1',
           title: 'Permis de Conduire Mobile (mDL)',
-          company: 'Hb Technologies SPA',
+          company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
             "Conception et développement d'une solution de permis de conduire numérique conforme à la norme ISO 18013-5. Le système comprenait deux applications mobiles — l'une pour les titulaires de permis et l'autre pour les vérificateurs — ainsi qu'une plateforme pour l'autorité de délivrance, le tout basé sur une architecture en microservices. Le backend a été développé en GoLang, les interfaces mobiles en Flutter, et la reconnaissance faciale en Python. L'infrastructure s'appuyait sur une Infrastructure à Clé Publique (PKI) pour la gestion sécurisée des clés et l'intégrité des données, avec Redis utilisé pour un stockage rapide et sécurisé des clés cryptographiques.",
