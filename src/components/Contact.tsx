@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { supabase } from '../lib/supabase';
 import type { ContactForm } from '../types';
 
 const Contact: React.FC = () => {
@@ -31,14 +32,34 @@ const Contact: React.FC = () => {
 
     setStatus('sending');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setStatus('success');
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset status after 3 seconds
-    setTimeout(() => setStatus('idle'), 3000);
+    try {
+      const { data, error } = await supabase
+        .from('portfolio_contact_me')
+        .insert([
+          {
+            name: formData.name.trim(),
+            email: formData.email.trim(),
+            message: formData.message.trim(),
+          }
+        ])
+        .select();
+
+      if (error) {
+        console.error('Supabase error:', error);
+        setStatus('error');
+        return;
+      }
+
+      console.log('Success:', data);
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      
+      // Reset status after 3 seconds
+      setTimeout(() => setStatus('idle'), 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+    }
   };
 
   return (
