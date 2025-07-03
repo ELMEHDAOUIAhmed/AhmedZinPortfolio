@@ -21,12 +21,9 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <div className="flex items-center">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent hover:from-purple-600 hover:via-pink-600 hover:to-blue-600 transition-all duration-500 relative"
-            >
+            <div className="relative text-lg sm:text-xl font-bold text-gray-700 dark:text-gray-200 transition-all duration-300 hover:scale-110 cursor-default">
               <span className="relative z-10">AhmedZin.</span>
-            </button>
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">

@@ -107,7 +107,7 @@ const Contributions: React.FC = () => {
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20 dark:border-gray-700/20 overflow-hidden group/stat">
+                  <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-purple-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-blue-600 dark:text-blue-400 mb-1">
@@ -117,7 +117,7 @@ const Contributions: React.FC = () => {
                       <p className="text-xs text-gray-600 dark:text-gray-400">Downloads</p>
                     </div>
                   </div>
-                  <div className="relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20 dark:border-gray-700/20 overflow-hidden group/stat">
+                  <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-yellow-600 dark:text-yellow-400 mb-1">
@@ -127,7 +127,7 @@ const Contributions: React.FC = () => {
                       <p className="text-xs text-gray-600 dark:text-gray-400">Stars</p>
                     </div>
                   </div>
-                  <div className="relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-white/20 dark:border-gray-700/20 overflow-hidden group/stat">
+                  <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
                     <div className="absolute inset-0 bg-gradient-to-r from-pink-400/5 to-blue-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-green-600 dark:text-green-400 mb-1">
@@ -157,7 +157,7 @@ const Contributions: React.FC = () => {
                 </div>
 
                 {/* Key Enhancements */}
-                <div className="relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 dark:border-gray-700/20 overflow-hidden">
+                <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-4 border border-gray-200/40 dark:border-gray-700/20 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-blue-400/5 animate-liquid-glass"></div>
                   <div className="relative z-10">
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
