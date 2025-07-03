@@ -9,7 +9,7 @@ import {
   ChevronRight,
   X,
 } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 
 const Hero: React.FC = () => {
@@ -66,10 +66,10 @@ const Hero: React.FC = () => {
               <div className="space-y-4 lg:space-y-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                   <span className="text-gray-900 dark:text-white">
-                    Hi, My name is{' '}
+                    {t.hero.greeting}{' '}
                   </span>
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient-shift">
-                    ELMEHDAOUI Ahmed
+                    {t.hero.name}
                   </span>
                   <span className="text-gray-900 dark:text-white"> 👋</span>
                 </h1>
@@ -108,7 +108,7 @@ const Hero: React.FC = () => {
                   <div className="relative flex items-center justify-center space-x-2 z-10">
                     <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
                     <span className="text-sm sm:text-base font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
-                      Preview CV
+                      {t.hero.buttons.previewCV}
                     </span>
                   </div>
                 </button>
@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
                   <div className="relative flex items-center justify-center space-x-2 z-10">
                     <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
                     <span className="text-sm sm:text-base font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                      Download CV
+                      {t.hero.buttons.downloadCV}
                     </span>
                   </div>
                 </button>
@@ -231,7 +231,7 @@ const Hero: React.FC = () => {
             {/* Modal header */}
             <div className="relative flex items-center justify-between p-4 border-b border-white/20 dark:border-gray-800/30 backdrop-blur-sm">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                CV Preview
+                {t.hero.modal.title}
               </h3>
               <button
                 onClick={() => setShowPdfPreview(false)}
@@ -246,7 +246,7 @@ const Hero: React.FC = () => {
               <iframe
                 src="https://jmp.sh/AqUsZzVs"
                 className="w-full h-full border-0"
-                title="CV Preview"
+                title={t.hero.modal.title}
               />
             </div>
 
@@ -258,7 +258,7 @@ const Hero: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
                 <Download className="w-5 h-5 relative z-10" />
-                <span className="relative z-10">Download CV</span>
+                <span className="relative z-10">{t.hero.modal.downloadButton}</span>
               </button>
             </div>
           </div>

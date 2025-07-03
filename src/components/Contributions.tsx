@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink, Star, Download, GitFork, TrendingUp } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 
 const Contributions: React.FC = () => {

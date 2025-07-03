@@ -9,7 +9,8 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      greeting: 'Hi, My name is ELMEHDAOUI Ahmed 👋',
+      greeting: 'Hi, My name is',
+      name: 'ELMEHDAOUI Ahmed',
       chips: [
         'Software Engineer',
         'Mobile & Full-Stack Developer',
@@ -19,17 +20,25 @@ export const translations = {
       aboutTitle: 'About Me',
       aboutText:
         "Software engineering student pursuing a Master's in Software Engineering at USTHB. Specialized in backend development with GoLang and mobile development with Flutter. Currently working on a project developing a mobile driving license (mDL) solution with HB Technologies SPA, alongside smart IoT system development.",
+      buttons: {
+        previewCV: 'Preview CV',
+        downloadCV: 'Download CV',
+      },
+      modal: {
+        title: 'CV Preview',
+        downloadButton: 'Download CV',
+      },
     },
     experience: {
       title: 'Projects & Experience',
       experiences: [
         {
           id: '1',
-          title: 'Mobile Driving License (mDL) Developer',
+          title: 'Mobile Driving License (mDL)',
           company: 'Hb Technologies SPA',
           timeline: '11/2024 - 07/2025',
           description:
-            'Designing and developing a digital driving license solution compliant with ISO 18013-5 standard, using microservices architecture. Backend developed in GoLang, mobile interface built with Flutter, and facial recognition based on Python. Infrastructure relies on PKI for security key management and data integrity.',
+            'Designed and developed a digital driving license solution compliant with the ISO 18013-5 standard. The system comprised two mobile applications—one for license holders and one for verifiers—alongside an issuing authority platform, all built using a microservices architecture. The backend was developed in GoLang, mobile interfaces in Flutter, and facial recognition in Python. The infrastructure leveraged Public Key Infrastructure (PKI) for secure key management and data integrity, with Redis used for fast and secure storage of cryptographic keys.',
           technologies: [
             'GoLang',
             'Flutter',
@@ -232,9 +241,18 @@ export const translations = {
         email: 'Email',
         message: 'Message',
         submit: 'Send Message',
+        placeholders: {
+          name: 'Your name',
+          email: 'your.email@example.com',
+          message: 'Tell me about your project...',
+        },
+        sending: 'Sending...',
       },
       success: 'Message sent successfully!',
       error: 'Please fill in all fields correctly.',
+    },
+    footer: {
+      copyright: '© 2025 ELMEHDAOUI Ahmed. All rights reserved.',
     },
   },
   fr: {
@@ -247,27 +265,36 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      greeting: "Salut, je m'appelle ELMEHDAOUI Ahmed 👋",
+      greeting: 'Salut, je m\'appelle',
+      name: 'ELMEHDAOUI Ahmed',
       chips: [
         'Ingénieur Logiciel',
         'Développeur Mobile & Full-Stack',
         'Projets IoT',
-        'Diplômé Master en ingénierie logicielle',
+        'Diplômé Master Ingénierie de Logiciels',
       ],
       aboutTitle: 'À Propos de Moi',
       aboutText:
         "Étudiant passionné en ingénierie logicielle poursuivant un Master en Ingénierie de Logiciels à l'USTHB. Spécialisé dans le développement mobile avec Flutter, le développement backend avec GoLang, et les solutions IoT. Actuellement en train de travailler sur des projets de pointe incluant des solutions de permis de conduire mobile (mDL) et des systèmes IoT intelligents.",
+      buttons: {
+        previewCV: 'Aperçu CV',
+        downloadCV: 'Télécharger CV',
+      },
+      modal: {
+        title: 'Aperçu CV',
+        downloadButton: 'Télécharger CV',
+      },
     },
     experience: {
       title: 'Projets & Expérience',
       experiences: [
         {
           id: '1',
-          title: 'Développeur Permis de Conduire Mobile (mDL)',
+          title: 'Permis de Conduire Mobile (mDL)',
           company: 'Hb Technologies SPA',
           timeline: '11/2024 - 07/2025',
           description:
-            "Conception et développement d'une solution de permis de conduire numérique conforme à la norme ISO 18013-5, utilisant une architecture microservices. Backend développé en GoLang, interface mobile construite avec Flutter, et reconnaissance faciale basée sur Python. L'infrastructure repose sur PKI pour la gestion des clés de sécurité et l'intégrité des données.",
+            "Conception et développement d'une solution de permis de conduire numérique conforme à la norme ISO 18013-5. Le système comprenait deux applications mobiles — l'une pour les titulaires de permis et l'autre pour les vérificateurs — ainsi qu'une plateforme pour l'autorité de délivrance, le tout basé sur une architecture en microservices. Le backend a été développé en GoLang, les interfaces mobiles en Flutter, et la reconnaissance faciale en Python. L'infrastructure s'appuyait sur une Infrastructure à Clé Publique (PKI) pour la gestion sécurisée des clés et l'intégrité des données, avec Redis utilisé pour un stockage rapide et sécurisé des clés cryptographiques.",
           technologies: [
             'GoLang',
             'Flutter',
@@ -470,9 +497,18 @@ export const translations = {
         email: 'Email',
         message: 'Message',
         submit: 'Envoyer le Message',
+        placeholders: {
+          name: 'Votre nom',
+          email: 'votre.email@exemple.com',
+          message: 'Parlez-moi de votre projet...',
+        },
+        sending: 'Envoi en cours...',
       },
       success: 'Message envoyé avec succès!',
       error: 'Veuillez remplir tous les champs correctement.',
+    },
+    footer: {
+      copyright: '© 2025 ELMEHDAOUI Ahmed. Tous droits réservés.',
     },
   },
 };

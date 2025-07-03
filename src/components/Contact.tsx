@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import type { ContactForm } from '../types';
 
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-white/20 dark:border-gray-600/20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
-                  placeholder="Your name"
+                  placeholder={t.contact.form.placeholders.name}
                 />
               </div>
               <div>
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-white/20 dark:border-gray-600/20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
-                  placeholder="your.email@example.com"
+                  placeholder={t.contact.form.placeholders.email}
                 />
               </div>
             </div>
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-white/20 dark:border-gray-600/20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
-                placeholder="Tell me about your project..."
+                placeholder={t.contact.form.placeholders.message}
               />
             </div>
 
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
               {status === 'sending' ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
-                  <span>Sending...</span>
+                  <span>{t.contact.form.sending}</span>
                 </>
               ) : (
                 <>
