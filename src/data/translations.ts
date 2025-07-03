@@ -106,7 +106,7 @@ export const translations = {
             'IoT',
             'Payment System',
           ],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/Flutter_startup_bike_rental_app',
         },
         {
           id: '3',
@@ -351,7 +351,7 @@ export const translations = {
           name: 'Gestion Dossiers Médicaux',
           description:
             'Projet de développement rapide pour la gestion des dossiers médicaux et ordonnances, construit en 5 jours avec méthodologies Agile.',
-          technologies: ['RAD Window', 'Base de Données', 'Agile'],
+          technologies: ['RAD', 'WinDev', 'Base de Données', 'Agile'],
           githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
         {
