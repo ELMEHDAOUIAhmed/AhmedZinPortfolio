@@ -149,7 +149,7 @@ const Hero: React.FC = () => {
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10" />
                 </a>
                 <a
-                  href="https://my-portfolio-win98-themed.vercel.app/"
+                  href="mailto:elmehdaoui.ahmed77@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative p-3 sm:p-4 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-800/30 overflow-hidden"
