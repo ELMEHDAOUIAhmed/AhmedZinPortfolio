@@ -205,20 +205,31 @@ export const translations = {
             'Java',
           ],
         },
+        Frontend: {
+          title: 'Frontend',
+          skills: ['HTML/CSS', 'JavaScript', 'JavaFX','React'],
+        },
         mobile: {
-          title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX'],
+          title: 'Mobile',
+          skills: ['Flutter', 'Android', 'IOS'],
         },
         backend: {
-          title: 'Backend & Database',
+          title: 'Database',
           skills: [
-            'Laravel',
             'PostgreSQL',
             'MongoDB',
             'Redis',
             'MySQL',
             'Oracle',
           ],
+        },
+        frameworks: {
+          title: 'Frameworks',
+          skills: [
+            'Flutter',
+            'Laravel',
+          ]
+          ,
         },
         tools: {
           title: 'Tools & Methodologies',
@@ -227,8 +238,12 @@ export const translations = {
             'BPMN 2.0',
             'Arduino',
             'Agile',
+            'RAD',
             'SQL',
             'Data Warehousing',
+            'Docker',
+            'Git',
+            'Supabase',
           ],
         },
       },

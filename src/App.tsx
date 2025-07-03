@@ -17,11 +17,11 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Skills />
         <Experience />
         <Projects />
         <Showcase />
         <Contributions />
-        <Skills />
         <Contact />
       </main>
       <footer className="relative bg-gray-900/95 dark:bg-gray-800/95 backdrop-blur-2xl text-white py-8 border-t border-white/10 dark:border-gray-700/20 overflow-hidden">
