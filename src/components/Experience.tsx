@@ -119,10 +119,21 @@ const Experience: React.FC = () => {
                 key={exp.id}
                 className={`relative flex items-center ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } flex-col md:flex-row`}
+                } flex-col md:flex-row group/timeline`}
               >
-                {/* Static timeline dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-black shadow-lg backdrop-blur-sm"></div>
+                {/* Interactive timeline dot with hover effects */}
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 z-20">
+                  <div className="relative">
+                    {/* Main dot */}
+                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-black shadow-lg backdrop-blur-sm transition-all duration-300 group-hover/timeline:scale-175 group-hover/timeline:shadow-xl group-hover/timeline:shadow-purple-500/30"></div>
+                    
+                    {/* Pulsing ring on hover */}
+                    <div className="absolute inset-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-0 group-hover/timeline:opacity-30 group-hover/timeline:scale-225 transition-all duration-500 animate-ping"></div>
+                    
+                    {/* Outer glow ring */}
+                    <div className="absolute inset-0 w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover/timeline:opacity-20 group-hover/timeline:scale-350 transition-all duration-700 blur-sm"></div>
+                  </div>
+                </div>
 
                 <div
                   className={`w-full md:w-1/2 ${
