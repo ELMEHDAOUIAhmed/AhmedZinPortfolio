@@ -94,26 +94,26 @@ const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white to-blue-50/50 dark:from-black dark:to-gray-900/50 relative overflow-hidden"
+      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-white to-blue-50/50 dark:from-black dark:to-gray-900/50 relative overflow-hidden"
     >
-      {/* Static background decorative elements - no moving bubbles */}
+      {/* Static background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
             {t.experience.title}
           </h2>
         </div>
 
         <div className="relative">
-          {/* Enhanced liquid glass timeline */}
+          {/* Static timeline line */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 backdrop-blur-sm"></div>
 
-          <div className="space-y-8 sm:space-y-12">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-12">
             {t.experience.experiences.map((exp, index) => (
               <div
                 key={exp.id}
@@ -121,38 +121,38 @@ const Experience: React.FC = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-col md:flex-row`}
               >
-                {/* Enhanced liquid glass timeline dot */}
+                {/* Static timeline dot */}
                 <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-white dark:border-black shadow-lg backdrop-blur-sm"></div>
 
                 <div
                   className={`w-full md:w-1/2 ${
-                    index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
+                    index % 2 === 0 ? 'md:pr-6 lg:pr-8' : 'md:pl-6 lg:pl-8'
                   } ml-12 md:ml-0`}
                 >
-                  <div className="relative bg-white/30 dark:bg-black/30 backdrop-blur-xl p-4 sm:p-6 rounded-2xl shadow-xl border border-white/20 dark:border-gray-800/30 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                  <div className="relative bg-white/30 dark:bg-black/30 backdrop-blur-xl p-3 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl shadow-xl border border-white/20 dark:border-gray-800/30 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                     {/* Enhanced liquid glass background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
                     
                     <div className="relative z-10">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 sm:mb-4 gap-2">
-                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 sm:mb-3 lg:mb-4 gap-2">
+                        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white flex-1">
                           {exp.title}
                         </h3>
-                        <span className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-medium bg-blue-100/50 dark:bg-blue-900/30 px-3 py-1 rounded-full backdrop-blur-sm self-start whitespace-nowrap border border-blue-200/50 dark:border-blue-700/50">
+                        <span className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-medium bg-blue-100/50 dark:bg-blue-900/30 px-2 sm:px-3 py-1 rounded-full backdrop-blur-sm self-start whitespace-nowrap border border-blue-200/50 dark:border-blue-700/50">
                           {exp.timeline}
                         </span>
                       </div>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium mb-3 text-sm sm:text-base">
+                      <p className="text-blue-600 dark:text-blue-400 font-medium mb-2 sm:mb-3 text-sm sm:text-base">
                         {exp.company}
                       </p>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
+                      <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed">
                         {exp.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {exp.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm border transition-all duration-200 hover:scale-105 ${getTechColor(
+                            className={`px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-xs font-medium backdrop-blur-sm border transition-all duration-200 hover:scale-105 ${getTechColor(
                               tech
                             )}`}
                           >
