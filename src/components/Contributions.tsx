@@ -35,12 +35,6 @@ const Contributions: React.FC = () => {
       id="contributions"
       className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-gray-900/90 dark:to-gray-800/90 relative overflow-hidden"
     >
-      {/* Static background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-32 left-32 w-80 h-80 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-32 right-32 w-80 h-80 bg-gradient-to-tr from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">

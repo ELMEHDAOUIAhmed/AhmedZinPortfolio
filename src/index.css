@@ -10,6 +10,51 @@
   body {
     @apply transition-colors duration-300;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: rgb(17 24 39); /* Default to gray-900 */
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Ensure text is always visible in dark mode */
+  .dark body {
+    color: rgb(255 255 255); /* white in dark mode */
+  }
+
+  /* Base text colors for better visibility */
+  .dark * {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Mobile-specific dark mode fixes */
+  @media (max-width: 767px) {
+    .dark {
+      color-scheme: dark;
+    }
+    
+    .dark body {
+      color: rgb(255 255 255) !important;
+      background-color: rgb(17 24 39) !important;
+    }
+    
+    .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+      color: rgb(255 255 255) !important;
+    }
+    
+    .dark p, .dark span, .dark div {
+      color: inherit !important;
+    }
+    
+    /* Force text visibility for specific elements that might be problematic */
+    .dark .text-gray-900 {
+      color: rgb(255 255 255) !important;
+    }
+    
+    .dark .text-gray-600 {
+      color: rgb(209 213 219) !important;
+    }
+    
+    .dark .text-gray-700 {
+      color: rgb(229 231 235) !important;
+    }
   }
 }
 
@@ -482,6 +527,34 @@
   
   .dark .mobile-nav-overlay {
     background: rgba(17, 24, 39, 0.95);
+  }
+  
+  /* Additional mobile dark mode text fixes */
+  .dark * {
+    color: inherit;
+  }
+  
+  .dark .text-gray-900 {
+    color: rgb(255 255 255) !important;
+  }
+  
+  .dark .text-gray-800 {
+    color: rgb(229 231 235) !important;
+  }
+  
+  .dark .text-gray-700 {
+    color: rgb(243 244 246) !important;
+  }
+  
+  .dark .text-gray-600 {
+    color: rgb(209 213 219) !important;
+  }
+  
+  /* Ensure proper text rendering on mobile */
+  .dark {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
