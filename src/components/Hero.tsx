@@ -9,10 +9,8 @@ const Hero: React.FC = () => {
 
   // Sample images - replace with your actual photos
   const images = [
-    'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop',
-    'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop',
-    'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop',
-    'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop',
+    'https://i.imgur.com/Tge2XIK.jpeg',
+    'https://i.imgur.com/nQQSO72.jpeg',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
