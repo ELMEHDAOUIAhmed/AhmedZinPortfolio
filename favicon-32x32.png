@@ -1,0 +1,31 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#grad1)" stroke="#0F172A" stroke-width="1"/>
+  
+  <!-- Developer symbol - Terminal/Console style -->
+  <rect x="7" y="9" width="18" height="14" rx="2" fill="#0F172A" stroke="#22D3EE" stroke-width="1"/>
+  
+  <!-- Terminal header -->
+  <rect x="7" y="9" width="18" height="3" rx="2" fill="#1E293B"/>
+  <circle cx="9.5" cy="10.5" r="0.8" fill="#EF4444"/>
+  <circle cx="11.5" cy="10.5" r="0.8" fill="#F59E0B"/>
+  <circle cx="13.5" cy="10.5" r="0.8" fill="#10B981"/>
+  
+  <!-- Code lines -->
+  <rect x="9" y="15" width="4" height="1" rx="0.5" fill="#22D3EE"/>
+  <rect x="14" y="15" width="6" height="1" rx="0.5" fill="#A78BFA"/>
+  <rect x="9" y="17.5" width="8" height="1" rx="0.5" fill="#34D399"/>
+  <rect x="9" y="20" width="5" height="1" rx="0.5" fill="#F472B6"/>
+  
+  <!-- Cursor -->
+  <rect x="15" y="19.5" width="1" height="2" fill="#22D3EE"/>
+</svg>
