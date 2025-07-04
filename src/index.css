@@ -148,6 +148,191 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Vertical Timeline Component Customizations */
+.vertical-timeline::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.8),
+    rgba(147, 51, 234, 0.8),
+    rgba(79, 70, 229, 0.8)
+  ) !important;
+  width: 4px !important;
+}
+
+/* Enhanced animations that work with the library's built-in animations */
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: enhancedBounceIn 2s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  animation: enhancedIconBounce 2s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+/* Custom enhanced animations */
+@keyframes enhancedBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes enhancedIconBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Two-column layout animations */
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in,
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
+    animation: enhancedBounceInRight 1.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+  
+  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(odd) .vertical-timeline-element-content.bounce-in {
+    animation: enhancedBounceInLeft 1.5s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+}
+
+@keyframes enhancedBounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(20px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes enhancedBounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(-20px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.vertical-timeline-element-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05),
+    rgba(147, 51, 234, 0.05),
+    rgba(236, 72, 153, 0.05)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vertical-timeline-element-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon hover effects */
+.vertical-timeline-element-icon {
+  transition: all 0.3s ease !important;
+}
+
+.vertical-timeline-element-icon:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.1), 
+              inset 0 2px 0 rgba(255, 255, 255, 0.08), 
+              0 3px 0 4px rgba(0, 0, 0, 0.05), 
+              0 12px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Date styling */
+.vertical-timeline-element-date {
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  padding: 0.5rem 1rem !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dark mode adjustments for timeline */
+.dark .vertical-timeline-element-content {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.dark .vertical-timeline-element-content-arrow {
+  border-right: 7px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark .vertical-timeline-element-content h3,
+.dark .vertical-timeline-element-content h4 {
+  color: inherit !important;
+}
+
+.dark .vertical-timeline-element-date {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgb(209, 213, 219) !important;
+}
+
 /* Responsive scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

@@ -76,7 +76,7 @@ export const translations = {
         {
           id: '4',
           title: 'Scientific Club Web Application',
-          company: 'Micro Club - USTHB',
+          company: 'Micro Club - USTHB University',
           timeline: '05/2022',
           description:
             'Developed a university project with HTML, CSS, JavaScript and PHP to manage a student database, including a registration system with email verification and contact form.',
@@ -337,7 +337,7 @@ export const translations = {
         {
           id: '4',
           title: 'Web App Club Scientifique',
-          company: 'Micro Club - USTHB',
+          company: 'Micro Club - USTHB University',
           timeline: '05/2022',
           description:
             "Développement d'un projet universitaire avec HTML, CSS, JavaScript et PHP pour gérer une base de données d'étudiants, incluant un système d'inscriptions avec vérification email et formulaire de contact.",
