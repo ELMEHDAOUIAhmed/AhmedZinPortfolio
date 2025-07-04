@@ -82,9 +82,6 @@ const Hero: React.FC = () => {
 
               <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group">
                 <div className="relative z-10">
-                  <h2 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 lg:mb-4">
-                    {t.hero.aboutTitle}
-                  </h2>
                   <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                     {parseMarkdownText(t.hero.aboutText)}
                   </p>

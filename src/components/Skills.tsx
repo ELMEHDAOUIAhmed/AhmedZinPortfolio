@@ -1,6 +1,8 @@
 import React from 'react';
+import { User } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { parseMarkdownText } from '../utils/parseMarkdown';
 
 const Skills: React.FC = () => {
   const { language } = useLanguage();
@@ -52,6 +54,8 @@ const Skills: React.FC = () => {
       'Agile': 'bg-pink-100/80 text-pink-800 dark:bg-pink-900/50 dark:text-pink-200 border-pink-200/50 dark:border-pink-700/50',
       'SQL': 'bg-indigo-100/80 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-200 border-indigo-200/50 dark:border-indigo-700/50',
       'Data Warehousing': 'bg-violet-100/80 text-violet-800 dark:bg-violet-900/50 dark:text-violet-200 border-violet-200/50 dark:border-violet-700/50',
+      'RAD': 'bg-purple-100/80 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 border-purple-200/50 dark:border-purple-700/50',
+      'React': 'bg-cyan-100/80 text-cyan-800 dark:bg-cyan-900/50 dark:text-cyan-200 border-cyan-200/50 dark:border-cyan-700/50',
     };
     return colors[skill as keyof typeof colors] || 'bg-gray-100/80 text-gray-800 dark:bg-gray-700/50 dark:text-gray-200 border-gray-200/50 dark:border-gray-600/50';
   };
@@ -65,30 +69,59 @@ const Skills: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
-            {t.skills.title}
-          </h2>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-          {Object.entries(t.skills.categories).map(([key, category]) => (
-            <div key={key} className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 lg:mb-4">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className={`px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-xs font-medium backdrop-blur-sm border hover:scale-105 transition-all duration-200 ${getSkillColor(skill)}`}
-                  >
-                    {skill}
-                  </span>
-                ))}
+        {/* Main content layout - About Me on left, Skills on right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
+          
+          {/* Left side - About Me section */}
+          <div className="lg:order-1 flex">
+            <div className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full flex flex-col justify-center">
+              
+              {/* Header with icon */}
+              <div className="flex items-center mb-6">
+                <User className="w-6 h-6 text-gray-600 dark:text-gray-400 mr-3" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
+                  {t.skills.aboutMe.title}
+                </h3>
+              </div>
+              
+              {/* About text */}
+              <div className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
+                {parseMarkdownText(t.skills.aboutMe.text)}
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Right side - Skills section */}
+          <div className="lg:order-2">
+            {/* Skills title */}
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
+                {t.skills.title}
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {Object.entries(t.skills.categories).map(([key, category]) => (
+                <div key={key} className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 dark:text-white mb-2 sm:mb-3 lg:mb-4">
+                    {category.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className={`px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1 rounded-full text-xs font-medium backdrop-blur-sm border hover:scale-105 transition-all duration-200 ${getSkillColor(skill)}`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -192,6 +192,10 @@ export const translations = {
     },
     skills: {
       title: 'Skills & Technologies',
+      aboutMe: {
+        title: 'About Me',
+        text: 'As a **USTHB** software engineering graduate, my latest project—building a **mobile driving license solution**—revealed just how vital **automation** has become. By **dematerializing physical records** and automating every step—from **document capture** and **biometric enrollment** to **real-time synchronization** and **continuous security checks**—we transformed a paper-heavy system into a fast, **scalable**, and **fraud-resistant service**. This approach accelerates **workflows**, eliminates **human error**, and simultaneously reduces the risks of **documentary fraud** and exploitation of **obsolete data**. In our **digital era**, embracing **automation** is essential for **efficiency**, **security**, and **trust**.'
+      },
       categories: {
         languages: {
           title: 'Languages',
@@ -205,31 +209,20 @@ export const translations = {
             'Java',
           ],
         },
-        Frontend: {
-          title: 'Frontend',
-          skills: ['HTML/CSS', 'JavaScript', 'JavaFX','React'],
-        },
         mobile: {
-          title: 'Mobile',
-          skills: ['Flutter', 'Android', 'IOS'],
+          title: 'Mobile & Frontend',
+          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
-          title: 'Database',
+          title: 'Backend & Database',
           skills: [
+            'Laravel',
             'PostgreSQL',
             'MongoDB',
             'Redis',
             'MySQL',
             'Oracle',
           ],
-        },
-        frameworks: {
-          title: 'Frameworks',
-          skills: [
-            'Flutter',
-            'Laravel',
-          ]
-          ,
         },
         tools: {
           title: 'Tools & Methodologies',
@@ -238,12 +231,8 @@ export const translations = {
             'BPMN 2.0',
             'Arduino',
             'Agile',
-            'RAD',
             'SQL',
             'Data Warehousing',
-            'Docker',
-            'Git',
-            'Supabase',
           ],
         },
       },
@@ -463,6 +452,10 @@ export const translations = {
     },
     skills: {
       title: 'Compétences & Technologies',
+      aboutMe: {
+        title: 'À Propos de Moi',
+        text: 'En tant que diplômé en ingénierie logicielle de l\'**USTHB**, mon dernier projet—la construction d\'une **solution de permis de conduire mobile**—a révélé à quel point l\'**automatisation** est devenue vitale. En **dématérialisant les dossiers physiques** et en automatisant chaque étape—de la **capture de documents** et l\'**inscription biométrique** à la **synchronisation en temps réel** et aux **vérifications de sécurité continues**—nous avons transformé un système lourd en papier en un service rapide, **évolutif** et **résistant à la fraude**. Cette approche accélère les **flux de travail**, élimine les **erreurs humaines** et réduit simultanément les risques de **fraude documentaire** et d\'exploitation de **données obsolètes**. À notre **ère numérique**, adopter l\'**automatisation** est essentiel pour l\'**efficacité**, la **sécurité** et la **confiance**.'
+      },
       categories: {
         languages: {
           title: 'Langages',
@@ -478,7 +471,7 @@ export const translations = {
         },
         mobile: {
           title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX'],
+          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
           title: 'Backend & Base de Données',
