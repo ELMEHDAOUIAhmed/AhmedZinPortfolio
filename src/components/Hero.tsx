@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
   const handleDownloadCV = () => {
     // Your real CV download link
     const cvUrl =
-      'https://pouch.jumpshare.com/download/Z48cNysQ41ThuxhJ16xD5bYrtdwryuxr6I69HT03tfI';
+      'https://pouch.jumpshare.com/download/zambzRInomZSq1nqN-ov_gnd8HpZ1NrM03M6J6OPa6s';
     window.open(cvUrl, '_blank');
   };
 
@@ -235,7 +235,7 @@ const Hero: React.FC = () => {
             {/* PDF viewer */}
             <div className="h-full pb-12 sm:pb-16 relative">
               <iframe
-                src="https://jmp.sh/AqUsZzVs"
+                src="https://jmp.sh/Suxp9pvO"
                 className="w-full h-full border-0"
                 title={t.hero.modal.title}
               />
