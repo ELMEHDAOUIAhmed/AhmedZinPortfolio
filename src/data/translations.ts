@@ -16,7 +16,7 @@ export const translations = {
         'Mobile & Full-Stack Developer',
         'IoT Projects',
         'Process Automation',
-        'Master software engineering graduate',
+        'Master\'s graduate in Software Engineering',
       ],
       aboutTitle: 'About Me',
       aboutText:
@@ -281,7 +281,7 @@ export const translations = {
         'Développeur Mobile & Full-Stack',
         'Projets IoT',
         'Automatisation des processus',
-        'Diplômé Master Ingénierie de Logiciels',
+        'Diplômé d’un Master Ingénierie de Logiciels',
       ],
       aboutTitle: 'À Propos de Moi',
       aboutText:
