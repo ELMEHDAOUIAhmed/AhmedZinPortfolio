@@ -1,5 +1,4 @@
 import React from 'react';
-import { User } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { parseMarkdownText } from '../utils/parseMarkdown';
@@ -76,14 +75,6 @@ const Skills: React.FC = () => {
           {/* Left side - About Me section */}
           <div className="lg:order-1 flex">
             <div className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full flex flex-col justify-center">
-              
-              {/* Header with icon */}
-              <div className="flex items-center mb-6">
-                <User className="w-6 h-6 text-gray-600 dark:text-gray-400 mr-3" />
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
-                  {t.skills.aboutMe.title}
-                </h3>
-              </div>
               
               {/* About text */}
               <div className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">

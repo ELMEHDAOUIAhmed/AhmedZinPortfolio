@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   X,
+  User,
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
         id="hero"
         className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50/80 via-indigo-50/80 to-purple-50/80 dark:from-black/90 dark:via-gray-900/90 dark:to-black/90 relative overflow-hidden pt-16 sm:pt-20"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
             {/* Left side - Text content */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1">
@@ -82,9 +83,18 @@ const Hero: React.FC = () => {
 
               <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group">
                 <div className="relative z-10">
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {/* Header with icon */}
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <User className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400 mr-2 sm:mr-3" />
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white">
+                      {t.hero.aboutMe.title}
+                    </h3>
+                  </div>
+                  
+                  {/* About text */}
+                  <div className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                     {parseMarkdownText(t.hero.aboutText)}
-                  </p>
+                  </div>
                 </div>
               </div>
 

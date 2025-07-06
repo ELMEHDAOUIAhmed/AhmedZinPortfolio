@@ -29,6 +29,9 @@ export const translations = {
         title: 'CV Preview',
         downloadButton: 'Download CV',
       },
+      aboutMe: {
+        title: 'About Me',
+      },
     },
     experience: {
       title: 'Projects & Experience',
@@ -192,7 +195,7 @@ export const translations = {
       ]
     },
     skills: {
-      title: 'Skills & Technologies',
+      title: 'Technical Expertise',
       aboutMe: {
         title: 'About Me',
         text: 'As a **USTHB** software engineering graduate, my latest project—building a **mobile driving license solution**—revealed just how vital **automation** has become. By **dematerializing physical records** and automating every step—from **document capture** and **biometric enrollment** to **real-time synchronization** and **continuous security checks**—we transformed a paper-heavy system into a fast, **scalable**, and **fraud-resistant service**. This approach accelerates **workflows**, eliminates **human error**, and simultaneously reduces the risks of **documentary fraud** and exploitation of **obsolete data**. In our **digital era**, embracing **automation** is essential for **efficiency**, **security**, and **trust**.'
@@ -233,6 +236,7 @@ export const translations = {
             'Arduino',
             'Agile',
             'SQL',
+            'NoSQL',
             'Data Warehousing',
           ],
         },
@@ -289,6 +293,9 @@ export const translations = {
       modal: {
         title: 'Aperçu CV',
         downloadButton: 'Télécharger CV',
+      },
+      aboutMe: {
+        title: 'À Propos de Moi',
       },
     },
     experience: {
@@ -453,7 +460,7 @@ export const translations = {
       ]
     },
     skills: {
-      title: 'Compétences & Technologies',
+      title: 'Expertise Technique',
       aboutMe: {
         title: 'À Propos de Moi',
         text: 'En tant que diplômé en ingénierie logicielle de l\'**USTHB**, mon dernier projet—la construction d\'une **solution de permis de conduire mobile**—a révélé à quel point l\'**automatisation** est devenue vitale. En **dématérialisant les dossiers physiques** et en automatisant chaque étape—de la **capture de documents** et l\'**inscription biométrique** à la **synchronisation en temps réel** et aux **vérifications de sécurité continues**—nous avons transformé un système lourd en papier en un service rapide, **évolutif** et **résistant à la fraude**. Cette approche accélère les **flux de travail**, élimine les **erreurs humaines** et réduit simultanément les risques de **fraude documentaire** et d\'exploitation de **données obsolètes**. À notre **ère numérique**, adopter l\'**automatisation** est essentiel pour l\'**efficacité**, la **sécurité** et la **confiance**.'
