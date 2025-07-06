@@ -69,19 +69,16 @@ const Projects: React.FC = () => {
               className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-xl border border-white/20 dark:border-gray-700/20 overflow-hidden hover:shadow-2xl transition-all duration-300 group hover:scale-105"
             >
               <div className="p-3 sm:p-4 lg:p-6">
-                <div className="flex items-center justify-between mb-2 sm:mb-3 lg:mb-4">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.name}
                   </h3>
-                </div>
-                
-                <div className="flex justify-end space-x-2 mb-3">
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1 sm:p-1.5 lg:p-2 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-200 hover:scale-110 border border-white/20 dark:border-gray-700/20"
+                      className="p-1 sm:p-1.5 lg:p-2 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-200 hover:scale-110 border border-white/20 dark:border-gray-700/20 flex-shrink-0"
                     >
                       <Github className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
                     </a>

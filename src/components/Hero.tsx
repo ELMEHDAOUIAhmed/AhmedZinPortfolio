@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
   const handleDownloadCV = () => {
     // Your real CV download link
     const cvUrl =
-      'https://pouch.jumpshare.com/download/zambzRInomZSq1nqN-ov_gnd8HpZ1NrM03M6J6OPa6s';
+      'https://pouch.jumpshare.com/download/Z48cNysQ41ThuxhJ16xD5bYrtdwryuxr6I69HT03tfI';
     window.open(cvUrl, '_blank');
   };
 
@@ -88,17 +88,22 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Enhanced CV Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {/* Enhanced Compact CV Buttons */}
+              <div className="flex flex-row gap-3 sm:gap-4">
                 <button
                   onClick={handlePreviewCV}
-                  className="relative px-3 py-2 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex-1 sm:flex-none group"
+                  className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 animate-liquid-glass"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Animated glass background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-indigo-500/10 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Glass reflection effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                  
                   <div className="relative flex items-center justify-center space-x-2 z-10">
                     <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
-                    <span className="text-sm sm:text-base font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
+                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
                       {t.hero.buttons.previewCV}
                     </span>
                   </div>
@@ -106,46 +111,66 @@ const Hero: React.FC = () => {
 
                 <button
                   onClick={handleDownloadCV}
-                  className="relative px-3 py-2 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex-1 sm:flex-none group"
+                  className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
                 >
-                  <div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-blue-400/10 animate-liquid-glass"
+                  {/* Animated glass background */}
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"
                     style={{ animationDelay: '1s' }}
                   ></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Glass reflection effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                  
                   <div className="relative flex items-center justify-center space-x-2 z-10">
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
-                    <span className="text-sm sm:text-base font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
+                    <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
+                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
                       {t.hero.buttons.downloadCV}
                     </span>
                   </div>
                 </button>
               </div>
 
+              {/* Enhanced Social Icons with specific hover colors */}
               <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4">
                 <a
                   href="https://github.com/ELMEHDAOUIAhmed/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative p-2.5 sm:p-3 lg:p-4 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-800/30 overflow-hidden"
+                  className="group relative p-3 sm:p-3.5 lg:p-4 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-white/30 dark:border-gray-700/30 overflow-hidden hover:scale-110"
                 >
-                  <Github className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10" />
+                  {/* Glass background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 relative z-10" />
                 </a>
+                
                 <a
                   href="https://linkedin.com/in/ahmed-elmehdaoui-234182278/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative p-2.5 sm:p-3 lg:p-4 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-800/30 overflow-hidden"
+                  className="group relative p-3 sm:p-3.5 lg:p-4 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-white/30 dark:border-gray-700/30 overflow-hidden hover:scale-110"
                 >
-                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10" />
+                  {/* Glass background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
                 </a>
+                
                 <a
                   href="mailto:elmehdaoui.ahmed77@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative p-2.5 sm:p-3 lg:p-4 bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/20 dark:border-gray-800/30 overflow-hidden"
+                  className="group relative p-3 sm:p-3.5 lg:p-4 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-white/30 dark:border-gray-700/30 overflow-hidden hover:scale-110"
                 >
-                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10" />
+                  {/* Glass background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors duration-300 relative z-10" />
                 </a>
               </div>
             </div>
@@ -213,43 +238,53 @@ const Hero: React.FC = () => {
         </div>
       </section>
 
-      {/* Enhanced PDF Preview Modal */}
+      {/* Enhanced PDF Preview Modal with Elegant Glassy Button */}
       {showPdfPreview && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-2 sm:p-4">
           <div className="relative w-full max-w-4xl h-full max-h-[90vh] bg-white/10 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-white/20 dark:border-gray-800/30">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-purple-400/5 animate-liquid-glass"></div>
             
-            {/* Modal header */}
+            {/* Modal header with white title */}
             <div className="relative flex items-center justify-between p-3 sm:p-4 border-b border-white/20 dark:border-gray-800/30 backdrop-blur-sm">
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-base sm:text-lg font-semibold text-white">
                 {t.hero.modal.title}
               </h3>
               <button
                 onClick={() => setShowPdfPreview(false)}
                 className="p-1.5 sm:p-2 hover:bg-white/10 dark:hover:bg-black/20 rounded-lg transition-colors backdrop-blur-sm"
               >
-                <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 dark:text-gray-400" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300 dark:text-gray-400 hover:text-white" />
               </button>
             </div>
 
             {/* PDF viewer */}
             <div className="h-full pb-12 sm:pb-16 relative">
               <iframe
-                src="https://jmp.sh/Suxp9pvO"
+                src="https://jmp.sh/AqUsZzVs"
                 className="w-full h-full border-0"
                 title={t.hero.modal.title}
               />
             </div>
 
-            {/* Modal footer */}
+            {/* Modal footer with elegant glassy download button */}
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-white/10 dark:bg-black/20 border-t border-white/20 dark:border-gray-800/30 backdrop-blur-2xl">
               <button
                 onClick={handleDownloadCV}
-                className="relative w-full sm:w-auto px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg sm:rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-xl hover:shadow-2xl overflow-hidden group text-sm sm:text-base"
+                className="relative w-full sm:w-auto px-4 py-2.5 sm:px-6 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105 text-sm sm:text-base"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
-                <Download className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" />
-                <span className="relative z-10">{t.hero.modal.downloadButton}</span>
+                {/* Animated glass background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Glass reflection effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                
+                <div className="relative flex items-center justify-center space-x-2 z-10">
+                  <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
+                  <span className="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
+                    {t.hero.modal.downloadButton}
+                  </span>
+                </div>
               </button>
             </div>
           </div>

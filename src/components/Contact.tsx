@@ -16,6 +16,7 @@ const Contact: React.FC = () => {
   });
   
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,12 +28,15 @@ const Contact: React.FC = () => {
     
     if (!formData.name || !formData.email || !formData.message) {
       setStatus('error');
+      setStatusMessage('Please fill in all fields');
       return;
     }
 
     setStatus('sending');
+    setStatusMessage('');
     
     try {
+      // Save to Supabase only
       const { data, error } = await supabase
         .from('portfolio_contact_me')
         .insert([
@@ -47,18 +51,30 @@ const Contact: React.FC = () => {
       if (error) {
         console.error('Supabase error:', error);
         setStatus('error');
+        setStatusMessage('Failed to save your message to our database. Please try again or contact us directly.');
         return;
       }
 
-      console.log('Success:', data);
+      console.log('Success - Database:', data);
       setStatus('success');
+      setStatusMessage('Message sent successfully! We will get back to you shortly.');
       setFormData({ name: '', email: '', message: '' });
       
-      // Reset status after 3 seconds
-      setTimeout(() => setStatus('idle'), 3000);
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 5000);
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
+      setStatusMessage('An unexpected error occurred. Please try again or contact us directly.');
+      
+      // Reset status after error to allow retry
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 7000);
     }
   };
 
@@ -125,11 +141,11 @@ const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 sm:py-2.5 lg:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-105 text-sm sm:text-base"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-2 sm:py-2.5 lg:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-105 disabled:hover:scale-100 text-sm sm:text-base"
             >
               {status === 'sending' ? (
                 <>
-                  <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
+                  <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white border-t-2 border-t-transparent"></div>
                   <span>{t.contact.form.sending}</span>
                 </>
               ) : (
@@ -143,14 +159,18 @@ const Contact: React.FC = () => {
             {status === 'success' && (
               <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-green-100/80 dark:bg-green-900/50 backdrop-blur-sm border border-green-200/50 dark:border-green-700/50 rounded-lg sm:rounded-xl flex items-center space-x-2">
                 <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 dark:text-green-400" />
-                <span className="text-green-800 dark:text-green-200 text-sm sm:text-base">{t.contact.success}</span>
+                <span className="text-green-800 dark:text-green-200 text-sm sm:text-base">
+                  {statusMessage || t.contact.success}
+                </span>
               </div>
             )}
 
             {status === 'error' && (
               <div className="mt-3 sm:mt-4 p-3 sm:p-4 bg-red-100/80 dark:bg-red-900/50 backdrop-blur-sm border border-red-200/50 dark:border-red-700/50 rounded-lg sm:rounded-xl flex items-center space-x-2">
                 <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 dark:text-red-400" />
-                <span className="text-red-800 dark:text-red-200 text-sm sm:text-base">{t.contact.error}</span>
+                <span className="text-red-800 dark:text-red-200 text-sm sm:text-base">
+                  {statusMessage || t.contact.error}
+                </span>
               </div>
             )}
           </form>

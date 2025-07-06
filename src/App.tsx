@@ -24,9 +24,9 @@ function App() {
         <Contributions />
         <Contact />
       </main>
-      <footer className="relative bg-gray-900/95 dark:bg-gray-800/95 backdrop-blur-2xl text-white py-6 sm:py-8 border-t border-white/10 dark:border-gray-700/20 overflow-hidden">
+      <footer className="relative bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl text-gray-900 dark:text-white py-6 sm:py-8 border-t border-white/10 dark:border-gray-700/10 shadow-2xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <p className="text-gray-400 text-sm sm:text-base">
+          <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base font-medium">
             {t.footer.copyright}
           </p>
         </div>
