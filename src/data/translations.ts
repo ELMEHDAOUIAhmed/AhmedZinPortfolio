@@ -83,7 +83,7 @@ export const translations = {
           timeline: '05/2022',
           description:
             'Developed a university project with HTML, CSS, JavaScript and PHP to manage a student database, including a registration system with email verification and contact form.',
-          technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+          technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
         },
         {
           id: '5',
@@ -215,7 +215,7 @@ export const translations = {
         },
         mobile: {
           title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX', 'React'],
+          skills: ['Flutter', 'HTML','CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
           title: 'Backend & Database',
@@ -348,7 +348,7 @@ export const translations = {
           timeline: '05/2022',
           description:
             "Développement d'un projet universitaire avec HTML, CSS, JavaScript et PHP pour gérer une base de données d'étudiants, incluant un système d'inscriptions avec vérification email et formulaire de contact.",
-          technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+          technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
         },
         {
           id: '5',
@@ -480,7 +480,7 @@ export const translations = {
         },
         mobile: {
           title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML/CSS', 'JavaScript', 'JavaFX', 'React'],
+          skills: ['Flutter', 'HTML','CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
           title: 'Backend & Base de Données',

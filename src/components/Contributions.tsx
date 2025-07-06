@@ -2,33 +2,11 @@ import React from 'react';
 import { Github, ExternalLink, Star, Download, GitFork, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { getTechColor } from '../utils/techColors';
 
 const Contributions: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-
-  const getTechColor = (tech: string) => {
-    const colors = {
-      Flutter:
-        'bg-blue-100/80 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200 border-blue-200/50 dark:border-blue-700/50',
-      Dart:
-        'bg-cyan-100/80 text-cyan-800 dark:bg-cyan-900/50 dark:text-cyan-200 border-cyan-200/50 dark:border-cyan-700/50',
-      'Computer Vision':
-        'bg-purple-100/80 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 border-purple-200/50 dark:border-purple-700/50',
-      OCR:
-        'bg-green-100/80 text-green-800 dark:bg-green-900/50 dark:text-green-200 border-green-200/50 dark:border-green-700/50',
-      Swift:
-        'bg-orange-100/80 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200 border-orange-200/50 dark:border-orange-700/50',
-      Kotlin:
-        'bg-purple-100/80 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200 border-purple-200/50 dark:border-purple-700/50',
-      OpenCV:
-        'bg-green-100/80 text-green-800 dark:bg-green-900/50 dark:text-green-200 border-green-200/50 dark:border-green-700/50',
-    };
-    return (
-      colors[tech as keyof typeof colors] ||
-      'bg-gray-100/80 text-gray-800 dark:bg-gray-700/50 dark:text-gray-200 border-gray-200/50 dark:border-gray-600/50'
-    );
-  };
 
   return (
     <section
