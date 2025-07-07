@@ -20,7 +20,7 @@ export const translations = {
       ],
       aboutTitle: 'About Me',
       aboutText:
-        "Software engineering student pursuing a Master's in **Software Engineering** at **USTHB**. Specialized in backend development with GoLang and mobile development with Flutter. Currently working on a project developing a mobile driving license **(mDL)** solution with **HB Technologies SPA**, alongside smart IoT system development.",
+        "Software engineering student pursuing a Master's in **Software Engineering** at **USTHB**. Specialized in backend development with **GoLang** and mobile development with **Flutter**. Currently working on a project developing a mobile driving license **(mDL)** solution with **HB Technologies SPA**, alongside smart IoT system development.",
       buttons: {
         previewCV: 'Preview CV',
         downloadCV: 'Download CV',
@@ -42,7 +42,7 @@ export const translations = {
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
-            'Designed and developed a digital driving license solution compliant with the ISO 18013-5 standard. The system comprised two mobile applications—one for license holders and one for verifiers—alongside an issuing authority platform, all built using a microservices architecture. The backend was developed in GoLang, mobile interfaces in Flutter, and facial recognition in Python. The infrastructure leveraged Public Key Infrastructure (PKI) for secure key management and data integrity, with Redis used for fast and secure storage of cryptographic keys.',
+            'Designed and developed a **digital driving license solution** compliant with **ISO 18013-5**. It includes two mobile apps (holder & verifier) and an issuer platform, built on **microservices**. Backend in **GoLang**, mobile apps in **Flutter**, facial recognition in **Python**. Secured with **Public Key Infrastructure (PKI)** and **Redis** for cryptographic key storage.',
           technologies: [
             'GoLang',
             'Flutter',
@@ -198,7 +198,7 @@ export const translations = {
       title: 'Technical Expertise',
       aboutMe: {
         title: 'About Me',
-        text: 'As a **USTHB** software engineering graduate, my latest project—building a **mobile driving license solution**—revealed just how vital **automation** has become. By **dematerializing physical records** and automating every step—from **document capture** and **biometric enrollment** to **real-time synchronization** and **continuous security checks**—we transformed a paper-heavy system into a fast, **scalable**, and **fraud-resistant service**. This approach accelerates **workflows**, eliminates **human error**, and simultaneously reduces the risks of **documentary fraud** and exploitation of **obsolete data**. In our **digital era**, embracing **automation** is essential for **efficiency**, **security**, and **trust**.'
+        text: 'I led a project to develop a **mobile driving license (mDL) solution**— a **secure digital alternative** to physical licenses based on **ISO 18013-5**. It automates key processes like **document capture**, **biometric enrollment**, and **real-time verification**. This transition from paper to digital boosted speed, security, and fraud resistance, showing how **smart automation** is vital in modern identity systems.'
       },
       categories: {
         languages: {
@@ -285,7 +285,7 @@ export const translations = {
       ],
       aboutTitle: 'À Propos de Moi',
       aboutText:
-        "Étudiant passionné en ingénierie logicielle poursuivant un Master en **Ingénierie de Logiciels** à l'**USTHB**. Spécialisé dans le développement mobile avec Flutter, le développement backend avec GoLang, et les solutions IoT. Actuellement en train de travailler sur des projets de pointe incluant des solutions de permis de conduire mobile **(mDL)** avec **HB Technologies SPA** et des systèmes IoT intelligents.",
+        "Étudiant en **ingénierie de logiciels** poursuivant un Master en Software Engineering à l’**USTHB**. Spécialisé en développement backend avec **GoLang** et en développement mobile avec **Flutter**. Actuellement impliqué dans un projet de développement d’un permis de conduire mobile **(mDL)** avec **HB Technologies SPA**, en parallèle du développement de systèmes IoT intelligents.",
       buttons: {
         previewCV: 'Aperçu CV',
         downloadCV: 'Télécharger CV',
@@ -307,7 +307,7 @@ export const translations = {
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
-            "Conception et développement d'une solution de permis de conduire numérique conforme à la norme ISO 18013-5. Le système comprenait deux applications mobiles — l'une pour les titulaires de permis et l'autre pour les vérificateurs — ainsi qu'une plateforme pour l'autorité de délivrance, le tout basé sur une architecture en microservices. Le backend a été développé en GoLang, les interfaces mobiles en Flutter, et la reconnaissance faciale en Python. L'infrastructure s'appuyait sur une Infrastructure à Clé Publique (PKI) pour la gestion sécurisée des clés et l'intégrité des données, avec Redis utilisé pour un stockage rapide et sécurisé des clés cryptographiques.",
+            'Conception et développement d’une **solution de permis de conduire mobile** conforme à la norme **ISO 18013-5**. Deux apps mobiles (titulaire & vérificateur) et une plateforme pour l’autorité, le tout en **microservices**. Backend en **GoLang**, apps en **Flutter**, reconnaissance faciale en **Python**. Sécurisé via **infrastructure à clé publique (PKI)** et **Redis** pour le stockage des clés.',
           technologies: [
             'GoLang',
             'Flutter',
@@ -463,7 +463,7 @@ export const translations = {
       title: 'Expertise Technique',
       aboutMe: {
         title: 'À Propos de Moi',
-        text: 'En tant que diplômé en ingénierie logicielle de l\'**USTHB**, mon dernier projet—la construction d\'une **solution de permis de conduire mobile**—a révélé à quel point l\'**automatisation** est devenue vitale. En **dématérialisant les dossiers physiques** et en automatisant chaque étape—de la **capture de documents** et l\'**inscription biométrique** à la **synchronisation en temps réel** et aux **vérifications de sécurité continues**—nous avons transformé un système lourd en papier en un service rapide, **évolutif** et **résistant à la fraude**. Cette approche accélère les **flux de travail**, élimine les **erreurs humaines** et réduit simultanément les risques de **fraude documentaire** et d\'exploitation de **données obsolètes**. À notre **ère numérique**, adopter l\'**automatisation** est essentiel pour l\'**efficacité**, la **sécurité** et la **confiance**.'
+        text: 'J’ai dirigé un projet de développement d’une **solution de permis de conduire mobile (mDL)** — une **alternative numérique sécurisée** aux permis physiques, basée sur la norme **ISO 18013-5**. Elle automatise des processus clés comme la **capture de documents**, l’**enrôlement biométrique** et la **vérification en temps réel**. Cette transition du papier au numérique a amélioré la rapidité, la sécurité et la résistance à la fraude, démontrant que **l’automatisation intelligente** est essentielle dans les systèmes d’identité modernes.',
       },
       categories: {
         languages: {

@@ -95,7 +95,7 @@ const Experience: React.FC = () => {
                   {parseMarkdownText(exp.company)}
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base leading-relaxed" style={{ marginBottom: '0.75rem' }}>
-                  {exp.description}
+                  {parseMarkdownText(exp.description)}
                 </p>
                 
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
