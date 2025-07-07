@@ -22,9 +22,8 @@ const Skills: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
           
           {/* Left side - About Me section */}
-          <div className="lg:order-1 flex">
-            <div className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full flex flex-col justify-center">
-              
+          <div className="lg:order-1 flex items-center">
+            <div className="bg-white/30 dark:bg-gray-800/30 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full">
               {/* About text */}
               <div className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                 {parseMarkdownText(t.skills.aboutMe.text)}
