@@ -189,7 +189,7 @@ export const translations = {
           stats: {
             downloads: '1K+',
             stars: '1',
-            forks: '1'
+            forks: '2'
           }
         }
       ]
