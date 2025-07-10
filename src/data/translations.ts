@@ -307,7 +307,7 @@ export const translations = {
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
-            'Conception et développement d’une **solution de permis de conduire mobile** conforme à la norme **ISO 18013-5**. Deux apps mobiles (titulaire & vérificateur) et une plateforme pour l’autorité, le tout en **microservices**. Backend en **GoLang**, apps en **Flutter**, reconnaissance faciale en **Python**. Sécurisé via **infrastructure à clé publique (PKI)** et **Redis** pour le stockage des clés.',
+            'Conception et développement d’une **solution de permis de conduire mobile** conforme à la norme **ISO 18013-5**. Comprend deux apps mobiles (titulaire & vérificateur) et une plateforme pour l’autorité, le tout en **microservices**. Backend en **GoLang**, apps en **Flutter**, reconnaissance faciale en **Python**. Sécurisé via **infrastructure à clé publique (PKI)** et **Redis** pour le stockage des clés.',
           technologies: [
             'GoLang',
             'Flutter',
