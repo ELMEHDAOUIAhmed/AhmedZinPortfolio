@@ -255,28 +255,52 @@ const Hero: React.FC = () => {
 
       {/* Enhanced PDF Preview Modal with Elegant Glassy Button */}
       {showPdfPreview && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-2 sm:p-4">
-          <div className="relative w-full max-w-4xl h-full max-h-[90vh] bg-white/10 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border border-white/20 dark:border-gray-800/30">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-1 sm:p-2">
+          <div className="relative w-full max-w-5xl h-full max-h-[95vh] bg-white/5 dark:bg-black/10 backdrop-blur-3xl rounded-lg sm:rounded-xl shadow-3xl overflow-hidden border border-white/10 dark:border-gray-800/20">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-purple-400/5 animate-liquid-glass"></div>
             
-            {/* Modal header with white title */}
-            <div className="relative flex items-center justify-between p-3 sm:p-4 border-b border-white/20 dark:border-gray-800/30 backdrop-blur-sm">
-              <h3 className="text-base sm:text-lg font-semibold text-white">
+            {/* Modal header with title and download button */}
+            <div className="relative flex items-center justify-between p-2 sm:p-3 border-b border-white/10 dark:border-gray-800/20 backdrop-blur-sm">
+              <h3 className="text-sm sm:text-base font-semibold text-white">
                 {t.hero.modal.title}
               </h3>
-              <button
-                onClick={() => setShowPdfPreview(false)}
-                className="p-1.5 sm:p-2 hover:bg-white/10 dark:hover:bg-black/20 rounded-lg transition-colors backdrop-blur-sm"
-              >
-                <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300 dark:text-gray-400 hover:text-white" />
-              </button>
+              
+              {/* Download button in header */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleDownloadCV}
+                  className="relative px-3 py-1.5 sm:px-4 sm:py-2 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-lg border border-white/30 dark:border-gray-700/30 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:scale-105 text-xs sm:text-sm"
+                >
+                  {/* Animated glass background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Glass reflection effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                  
+                  <div className="relative flex items-center justify-center space-x-1.5 z-10">
+                    <Download className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
+                    <span className="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
+                      {t.hero.modal.downloadButton}
+                    </span>
+                  </div>
+                </button>
+                
+                {/* Close button */}
+                <button
+                  onClick={() => setShowPdfPreview(false)}
+                  className="p-1.5 hover:bg-white/10 dark:hover:bg-black/20 rounded-lg transition-colors backdrop-blur-sm"
+                >
+                  <X className="w-4 h-4 text-gray-300 dark:text-gray-400 hover:text-white" />
+                </button>
+              </div>
             </div>
 
-            {/* PDF viewer */}
-            <div className="h-full pb-12 sm:pb-16 relative overflow-hidden">
+            {/* PDF viewer - full height with minimal padding */}
+            <div className="h-full relative overflow-hidden" style={{ height: 'calc(100% - 3rem)' }}>
               <iframe
                 src={`${import.meta.env.BASE_URL || '/'}assets/ELMEHDAOUI_Ahmed_CV.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH`}
-                className="w-full h-full border-0 rounded-lg"
+                className="w-full h-full border-0"
                 title={t.hero.modal.title}
                 style={{ minHeight: '600px' }}
                 onError={(e) => {
@@ -298,28 +322,6 @@ const Hero: React.FC = () => {
                   iframe.parentNode?.appendChild(fallback);
                 }}
               />
-            </div>
-
-            {/* Modal footer with elegant glassy download button */}
-            <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-white/10 dark:bg-black/20 border-t border-white/20 dark:border-gray-800/30 backdrop-blur-2xl">
-              <button
-                onClick={handleDownloadCV}
-                className="relative w-full sm:w-auto px-4 py-2.5 sm:px-6 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105 text-sm sm:text-base"
-              >
-                {/* Animated glass background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                {/* Glass reflection effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-                
-                <div className="relative flex items-center justify-center space-x-2 z-10">
-                  <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
-                  <span className="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
-                    {t.hero.modal.downloadButton}
-                  </span>
-                </div>
-              </button>
             </div>
           </div>
         </div>
