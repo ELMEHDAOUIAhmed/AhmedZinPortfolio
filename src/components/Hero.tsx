@@ -38,10 +38,14 @@ const Hero: React.FC = () => {
   };
 
   const handleDownloadCV = () => {
-    // Your real CV download link
-    const cvUrl =
-      'https://pouch.jumpshare.com/download/xyDRI2ZtJ9jD1CJIJMQHVlphKD2C3LcpIC7ERqhXeZg';
-    window.open(cvUrl, '_blank');
+    // Local CV download
+    const cvUrl = '/assets/ELMEHDAOUI_Ahmed_CV.pdf';
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'ELMEHDAOUI_Ahmed_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handlePreviewCV = () => {
@@ -268,11 +272,29 @@ const Hero: React.FC = () => {
             </div>
 
             {/* PDF viewer */}
-            <div className="h-full pb-12 sm:pb-16 relative">
+            <div className="h-full pb-12 sm:pb-16 relative overflow-hidden">
               <iframe
-                src="https://jmp.sh/NrKjhl5T"
-                className="w-full h-full border-0"
+                src="/assets/CV.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH"
+                className="w-full h-full border-0 rounded-lg"
                 title={t.hero.modal.title}
+                style={{ minHeight: '600px' }}
+                onError={(e) => {
+                  console.error('PDF loading error:', e);
+                  // Fallback: show download link if PDF fails to load
+                  const iframe = e.target as HTMLIFrameElement;
+                  iframe.style.display = 'none';
+                  const fallback = document.createElement('div');
+                  fallback.className = 'flex items-center justify-center h-full text-white';
+                  fallback.innerHTML = `
+                    <div class="text-center">
+                      <p class="mb-4">Unable to display PDF. Please download to view.</p>
+                      <button onclick="window.open('/assets/CV.pdf', '_blank')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                        Open PDF in New Tab
+                      </button>
+                    </div>
+                  `;
+                  iframe.parentNode?.appendChild(fallback);
+                }}
               />
             </div>
 
