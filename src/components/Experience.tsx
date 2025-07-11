@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
     const colors = [
       'rgb(33, 150, 243)', // Blue for professional work
       'rgb(76, 175, 80)', // Green for mobile/IoT
-      'rgb(156, 39, 176)', // Purple for medical/database
+      'rgb(30, 64, 175)', // Navy blue for medical/database
       'rgb(255, 152, 0)', // Orange for web
       'rgb(244, 67, 54)', // Red for software development
     ];
@@ -36,12 +36,12 @@ const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-white to-blue-50/50 dark:from-black dark:to-gray-900/50 relative overflow-hidden"
+      className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-white to-blue-50/50 dark:from-black dark:to-blue-900/20 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-br from-blue-400/10 to-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 bg-gradient-to-tr from-blue-500/10 to-blue-700/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -11,7 +11,7 @@ const Contributions: React.FC = () => {
   return (
     <section
       id="contributions"
-      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-gray-900/90 dark:to-gray-800/90 relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50/80 to-blue-100/60 dark:from-gray-900/90 dark:to-blue-900/20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
@@ -30,17 +30,17 @@ const Contributions: React.FC = () => {
               className="group relative bg-white/15 dark:bg-gray-900/15 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/20 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]"
             >
               {/* Liquid glass background animation */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 via-pink-400/5 to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative p-6 sm:p-8 z-10">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {project.name}
                       </h3>
-                      <span className="px-3 py-1 bg-purple-100/80 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium border border-purple-200/50 dark:border-purple-700/50">
+                      <span className="px-3 py-1 bg-blue-100/80 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium border border-blue-200/50 dark:border-blue-700/50">
                         v{project.pubVersion}
                       </span>
                     </div>
@@ -59,9 +59,9 @@ const Contributions: React.FC = () => {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl transition-all duration-300 flex items-center gap-2 text-sm font-medium shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden group/btn"
+                      className="relative px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-all duration-300 flex items-center gap-2 text-sm font-medium shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden group/btn"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-600/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                       <ExternalLink className="w-4 h-4 relative z-10" />
                       <span className="relative z-10">Pub.dev</span>
                     </a>
@@ -71,7 +71,7 @@ const Contributions: React.FC = () => {
                       rel="noopener noreferrer"
                       className="relative p-2 bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-200 hover:scale-110 border border-white/20 dark:border-gray-700/20 overflow-hidden group/github"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 opacity-0 group-hover/github:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-600/10 opacity-0 group-hover/github:opacity-100 transition-opacity duration-300"></div>
                       <Github className="w-5 h-5 relative z-10" />
                     </a>
                   </div>
@@ -80,7 +80,7 @@ const Contributions: React.FC = () => {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-purple-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-blue-600/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-blue-600 dark:text-blue-400 mb-1">
                         <Download className="w-4 h-4" />
@@ -90,7 +90,7 @@ const Contributions: React.FC = () => {
                     </div>
                   </div>
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-700/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-yellow-600 dark:text-yellow-400 mb-1">
                         <Star className="w-4 h-4" />
@@ -100,7 +100,7 @@ const Contributions: React.FC = () => {
                     </div>
                   </div>
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-400/5 to-blue-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-blue-800/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-green-600 dark:text-green-400 mb-1">
                         <GitFork className="w-4 h-4" />
@@ -130,16 +130,16 @@ const Contributions: React.FC = () => {
 
                 {/* Key Enhancements */}
                 <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-4 border border-gray-200/40 dark:border-gray-700/20 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-blue-400/5 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-blue-600/5"></div>
                   <div className="relative z-10">
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                       ✨ Key Enhancements
                     </h4>
                     <ul className="space-y-2">
                       {project.enhancements.map((enhancement, index) => (
                         <li key={index} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></span>
                           <span>{enhancement}</span>
                         </li>
                       ))}

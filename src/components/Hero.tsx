@@ -57,28 +57,29 @@ const Hero: React.FC = () => {
     <>
       <section
         id="hero"
-        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50/80 via-indigo-50/80 to-purple-50/80 dark:from-black/90 dark:via-gray-900/90 dark:to-black/90 relative overflow-hidden pt-16 sm:pt-20"
+        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50/80 via-blue-100/60 to-blue-200/40 dark:from-gray-900/90 dark:via-blue-900/20 dark:to-gray-900/90 relative overflow-hidden pt-16 sm:pt-20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
             {/* Left side - Text content */}
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1">
-              <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1 animate-slide-in-left">
+              <div className="space-y-3 sm:space-y-4 lg:space-y-6 animate-slide-in-left" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight animate-slide-in-left opacity-0" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
                   <span className="text-gray-900 dark:text-white">
                     {t.hero.greeting}{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient-shift">
+                  <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
                     {t.hero.name}
                   </span>
                   <span className="text-gray-900 dark:text-white"> 👋</span>
                 </h1>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 animate-slide-in-left opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
                   {t.hero.chips.map((chip, index) => (
                     <span
                       key={index}
-                      className="relative px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 bg-white/20 dark:bg-black/30 backdrop-blur-2xl rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-white/30 dark:hover:bg-black/40 overflow-hidden group"
+                      className="relative px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 bg-white/20 dark:bg-black/30 backdrop-blur-2xl rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-white/30 dark:hover:bg-black/40 overflow-hidden group animate-slide-in-left opacity-0"
+                      style={{ animationDelay: `${0.8 + index * 0.15}s`, animationFillMode: 'both' }}
                     >
                       <span className="relative z-10">{chip}</span>
                     </span>
@@ -86,7 +87,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group">
+              <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group animate-slide-in-left opacity-0" style={{ animationDelay: '1.5s', animationFillMode: 'both' }}>
                 <div className="relative z-10">
                   {/* Header with icon */}
                   <div className="flex items-center mb-3 sm:mb-4">
@@ -104,21 +105,21 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Enhanced Compact CV Buttons */}
-              <div className="flex flex-row gap-3 sm:gap-4">
+              <div className="flex flex-row gap-3 sm:gap-4 animate-slide-in-left opacity-0" style={{ animationDelay: '1.8s', animationFillMode: 'both' }}>
                 <button
                   onClick={handlePreviewCV}
                   className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
                 >
                   {/* Animated glass background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-indigo-500/10 animate-liquid-glass"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-blue-600/10 to-blue-700/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Glass reflection effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                   
                   <div className="relative flex items-center justify-center space-x-2 z-10">
-                    <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
-                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
+                    <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300" />
+                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-blue-900 transition-all duration-300">
                       {t.hero.buttons.previewCV}
                     </span>
                   </div>
@@ -129,18 +130,15 @@ const Hero: React.FC = () => {
                   className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
                 >
                   {/* Animated glass background */}
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"
-                    style={{ animationDelay: '1s' }}
-                  ></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-blue-700/10 to-blue-800/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Glass reflection effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                   
                   <div className="relative flex items-center justify-center space-x-2 z-10">
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
-                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
+                    <Download className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300" />
+                    <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent group-hover:from-blue-800 group-hover:to-blue-950 transition-all duration-300">
                       {t.hero.buttons.downloadCV}
                     </span>
                   </div>
@@ -148,7 +146,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Enhanced Social Icons with specific hover colors */}
-              <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4">
+              <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4 animate-slide-in-left opacity-0" style={{ animationDelay: '2.1s', animationFillMode: 'both' }}>
                 <a
                   href="https://github.com/ELMEHDAOUIAhmed/"
                   target="_blank"
@@ -157,7 +155,7 @@ const Hero: React.FC = () => {
                 >
                   {/* Glass background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <Github className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300 relative z-10" />
                 </a>
@@ -170,7 +168,7 @@ const Hero: React.FC = () => {
                 >
                   {/* Glass background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
                 </a>
@@ -183,7 +181,7 @@ const Hero: React.FC = () => {
                 >
                   {/* Glass background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors duration-300 relative z-10" />
                 </a>
@@ -191,16 +189,16 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Right side - Enhanced Image Carousel */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2 -mt-8 sm:-mt-12 lg:mt-0">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2 -mt-8 sm:-mt-12 lg:mt-0 animate-slide-in-right opacity-0" style={{ animationDelay: '0s', animationFillMode: 'both' }}>
               <div className="relative">
                 {/* Enhanced decorative background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/15 to-purple-400/15 rounded-3xl blur-2xl"></div>
-                <div className="absolute inset-2 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-3xl blur-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/15 to-blue-600/15 rounded-3xl blur-2xl"></div>
+                <div className="absolute inset-2 bg-gradient-to-tr from-blue-500/10 to-blue-700/10 rounded-3xl blur-xl"></div>
 
                 {/* Image carousel container */}
-                <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-1.5 sm:p-2 lg:p-3 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-purple-400/5 to-pink-400/5 animate-liquid-glass"></div>
-                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/10 dark:border-gray-800/20">
+                <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-1.5 sm:p-2 lg:p-3 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group hover:scale-125 transition-transform duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-blue-500/5 to-blue-600/5"></div>
+                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/10 dark:border-gray-800/20 transition-all duration-500">
                     {/* Images */}
                     {images.map((image, index) => (
                       <img
@@ -257,7 +255,7 @@ const Hero: React.FC = () => {
       {showPdfPreview && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-1 sm:p-2">
           <div className="relative w-full max-w-5xl h-full max-h-[95vh] bg-white/5 dark:bg-black/10 backdrop-blur-3xl rounded-lg sm:rounded-xl shadow-3xl overflow-hidden border border-white/10 dark:border-gray-800/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-purple-400/5 animate-liquid-glass"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-blue-600/5"></div>
             
             {/* Modal header with title and download button */}
             <div className="relative flex items-center justify-between p-2 sm:p-3 border-b border-white/10 dark:border-gray-800/20 backdrop-blur-sm">
@@ -272,15 +270,15 @@ const Hero: React.FC = () => {
                   className="relative px-3 py-1.5 sm:px-4 sm:py-2 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-lg border border-white/30 dark:border-gray-700/30 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:scale-105 text-xs sm:text-sm"
                 >
                   {/* Animated glass background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 animate-liquid-glass"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-blue-700/10 to-blue-800/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Glass reflection effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                   
                   <div className="relative flex items-center justify-center space-x-1.5 z-10">
-                    <Download className="w-3 h-3 sm:w-4 sm:h-4 text-purple-600 dark:text-purple-400 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors duration-300" />
-                    <span className="font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-pink-600 group-hover:to-purple-600 transition-all duration-300">
+                    <Download className="w-3 h-3 sm:w-4 sm:h-4 text-blue-700 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300" />
+                    <span className="font-semibold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent group-hover:from-blue-800 group-hover:to-blue-950 transition-all duration-300">
                       {t.hero.modal.downloadButton}
                     </span>
                   </div>

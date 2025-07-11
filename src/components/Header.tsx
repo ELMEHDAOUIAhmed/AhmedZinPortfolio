@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-auto mr-4">
             {navItems.map((item) => (
               <button
                 key={item.id}

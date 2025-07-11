@@ -9,11 +9,11 @@ const Projects: React.FC = () => {
   const t = translations[language];
 
   return (
-    <section id="projects" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-gray-50 to-indigo-50/50 dark:from-gray-800 dark:to-gray-900/50 relative overflow-hidden">
+    <section id="projects" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800 dark:to-blue-900/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 sm:top-40 left-20 sm:left-40 w-36 sm:w-72 h-36 sm:h-72 bg-gradient-to-br from-indigo-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 sm:bottom-40 right-20 sm:right-40 w-36 sm:w-72 h-36 sm:h-72 bg-gradient-to-tr from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 sm:top-40 left-20 sm:left-40 w-36 sm:w-72 h-36 sm:h-72 bg-gradient-to-br from-blue-400/10 to-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 sm:bottom-40 right-20 sm:right-40 w-36 sm:w-72 h-36 sm:h-72 bg-gradient-to-tr from-blue-500/10 to-blue-700/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

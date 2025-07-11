@@ -11,7 +11,7 @@ const Showcase: React.FC = () => {
   return (
     <section
       id="showcase"
-      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-indigo-50/80 to-purple-50/80 dark:from-gray-800/90 dark:to-gray-900/90 relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50/80 to-blue-100/60 dark:from-gray-800/90 dark:to-blue-900/20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
@@ -30,7 +30,7 @@ const Showcase: React.FC = () => {
               className="group relative bg-white/15 dark:bg-gray-900/15 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/20 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105"
             >
               {/* Liquid glass background animation */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-purple-400/5 to-pink-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-liquid-glass"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               {/* Portfolio image */}
               <div className="relative h-48 sm:h-56 overflow-hidden">
@@ -49,7 +49,7 @@ const Showcase: React.FC = () => {
                     rel="noopener noreferrer"
                     className="relative p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-all duration-200 border border-white/30 overflow-hidden group/btn"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-600/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                     <ExternalLink className="w-5 h-5 relative z-10" />
                   </a>
                 </div>
@@ -73,7 +73,7 @@ const Showcase: React.FC = () => {
                     rel="noopener noreferrer"
                     className="relative p-2 bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-200 hover:scale-110 border border-white/20 dark:border-gray-700/20 overflow-hidden group/link"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 animate-liquid-glass"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-600/10 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"></div>
                     <Eye className="w-4 h-4 relative z-10" />
                   </a>
                 </div>
