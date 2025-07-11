@@ -40,10 +40,11 @@ const Hero: React.FC = () => {
   const handleDownloadCV = () => {
     // Use proper base URL handling for GitHub Pages
     const basePath = import.meta.env.BASE_URL || '/';
-    const cvUrl = `${basePath}assets/ELMEHDAOUI_Ahmed_CV.pdf`;
+    const cvFileName = language === 'fr' ? 'ELMEHDAOUI_Ahmed_CV_FR.pdf' : 'ELMEHDAOUI_Ahmed_CV_EN.pdf';
+    const cvUrl = `${basePath}assets/${cvFileName}`;
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'ELMEHDAOUI_Ahmed_CV.pdf';
+    link.download = cvFileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -297,7 +298,7 @@ const Hero: React.FC = () => {
             {/* PDF viewer - full height with minimal padding */}
             <div className="h-full relative overflow-hidden" style={{ height: 'calc(100% - 3rem)' }}>
               <iframe
-                src={`${import.meta.env.BASE_URL || '/'}assets/ELMEHDAOUI_Ahmed_CV.pdf#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH`}
+                src={`${import.meta.env.BASE_URL || '/'}assets/${language === 'fr' ? 'ELMEHDAOUI_Ahmed_CV_FR.pdf' : 'ELMEHDAOUI_Ahmed_CV_EN.pdf'}#toolbar=1&navpanes=1&scrollbar=1&page=1&view=FitH`}
                 className="w-full h-full border-0"
                 title={t.hero.modal.title}
                 style={{ minHeight: '600px' }}
@@ -309,10 +310,11 @@ const Hero: React.FC = () => {
                   const fallback = document.createElement('div');
                   fallback.className = 'flex items-center justify-center h-full text-white';
                   const basePath = import.meta.env.BASE_URL || '/';
+                  const cvFileName = language === 'fr' ? 'ELMEHDAOUI_Ahmed_CV_FR.pdf' : 'ELMEHDAOUI_Ahmed_CV_EN.pdf';
                   fallback.innerHTML = `
                     <div class="text-center">
                       <p class="mb-4">Unable to display PDF. Please download to view.</p>
-                      <button onclick="window.open('${basePath}assets/ELMEHDAOUI_Ahmed_CV.pdf', '_blank')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                      <button onclick="window.open('${basePath}assets/${cvFileName}', '_blank')" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                         Open PDF in New Tab
                       </button>
                     </div>
