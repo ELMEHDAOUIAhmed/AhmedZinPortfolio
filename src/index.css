@@ -75,9 +75,38 @@
     animation: slideInRight 0.8s ease-out;
   }
 
+  .animate-slide-in-left-bounce {
+    animation: slideInLeftBounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .animate-slide-in-right-bounce {
+    animation: slideInRightBounce 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
   .animate-gradient-shift {
     background-size: 200% 200%;
     animation: gradientShift 3s ease infinite;
+  }
+
+  /* Staggered animation delays */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
   }
 }
 
@@ -106,7 +135,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
@@ -117,9 +146,48 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(100px);
   }
   to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced slide animations with bounce */
+@keyframes slideInLeftBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(20px);
+  }
+  80% {
+    opacity: 0.9;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRightBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(-20px);
+  }
+  80% {
+    opacity: 0.9;
+    transform: translateX(10px);
+  }
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
