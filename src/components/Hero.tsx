@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             {/* Left side - Text content */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1">
               <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight animate-slide-in-left-bounce opacity-0 animate-delay-100" style={{ animationFillMode: 'both' }}>
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight">
                   <span className="text-gray-900 dark:text-white">
                     {t.hero.greeting}{' '}
                   </span>
@@ -75,12 +75,11 @@ const Hero: React.FC = () => {
                   <span className="text-gray-900 dark:text-white"> 👋</span>
                 </h1>
 
-                <div className="flex flex-wrap gap-2 animate-slide-in-left-bounce opacity-0 animate-delay-200" style={{ animationFillMode: 'both' }}>
+                <div className="flex flex-wrap gap-2">
                   {t.hero.chips.map((chip, index) => (
                     <span
                       key={index}
-                      className="relative px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 bg-white/20 dark:bg-black/30 backdrop-blur-2xl rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-white/30 dark:hover:bg-black/40 overflow-hidden group animate-slide-in-left-bounce opacity-0"
-                      style={{ animationDelay: `${300 + index * 100}ms`, animationFillMode: 'both' }}
+                      className="relative px-2 py-1 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 bg-white/20 dark:bg-black/30 backdrop-blur-2xl rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-800/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:bg-white/30 dark:hover:bg-black/40 overflow-hidden group"
                     >
                       <span className="relative z-10">{chip}</span>
                     </span>
@@ -88,7 +87,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group animate-slide-in-left-bounce opacity-0 animate-delay-400" style={{ animationFillMode: 'both' }}>
+              <div className="relative bg-white/15 dark:bg-black/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/20 dark:border-gray-800/30 shadow-2xl overflow-hidden group">
                 <div className="relative z-10">
                   {/* Header with icon */}
                   <div className="flex items-center mb-3 sm:mb-4">
@@ -106,7 +105,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Enhanced Compact CV Buttons */}
-              <div className="flex flex-row gap-3 sm:gap-4 animate-slide-in-left-bounce opacity-0 animate-delay-500" style={{ animationFillMode: 'both' }}>
+              <div className="flex flex-row gap-3 sm:gap-4">
                 <button
                   onClick={handlePreviewCV}
                   className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
@@ -147,7 +146,7 @@ const Hero: React.FC = () => {
               </div>
 
               {/* Enhanced Social Icons with specific hover colors */}
-              <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4 animate-slide-in-left-bounce opacity-0" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
+              <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4">
                 <a
                   href="https://github.com/ELMEHDAOUIAhmed/"
                   target="_blank"
@@ -190,7 +189,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Right side - Enhanced Image Carousel */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2 -mt-8 sm:-mt-12 lg:mt-0 animate-slide-in-right-bounce opacity-0" style={{ animationFillMode: 'both' }}>
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2 -mt-8 sm:-mt-12 lg:mt-0">
               <div className="relative">
                 {/* Enhanced decorative background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/15 to-blue-600/15 rounded-3xl blur-2xl"></div>
