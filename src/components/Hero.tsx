@@ -9,6 +9,7 @@ import {
   ChevronRight,
   X,
   User,
+  MapPin,
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
@@ -72,8 +73,13 @@ const Hero: React.FC = () => {
                   <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
                     {t.hero.name}
                   </span>
-                  <span className="text-gray-900 dark:text-white"> 👋</span>
+                  <span className="text-gray-900 dark:text-white">👋</span>
                 </h1>
+                {/* Location under name */}
+                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-300 space-x-2">
+                  <MapPin className="w-5 h-5" />
+                  <span>Algeria, Algiers</span>
+                </div>
 
                 <div className="flex flex-wrap gap-2">
                   {t.hero.chips.map((chip, index) => (
