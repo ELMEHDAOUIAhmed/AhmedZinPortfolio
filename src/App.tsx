@@ -42,10 +42,10 @@ function App() {
   const [currentPage, setCurrentPage] = useState<'intro' | 'main'>('intro');
 
   useEffect(() => {
-    // Navigate to main page after intro animation completes (5 seconds)
+    // Navigate to main page after intro animation completes (3 seconds)
     const timer = setTimeout(() => {
       setCurrentPage('main');
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
