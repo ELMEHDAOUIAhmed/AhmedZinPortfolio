@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -8,10 +9,12 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './data/translations';
+import HelloIntero from './components/HelloIntero';
 
-function App() {
+const MainPage: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
       <Header />
@@ -31,6 +34,37 @@ function App() {
           </p>
         </div>
       </footer>
+    </div>
+  );
+};
+
+function App() {
+  const [currentPage, setCurrentPage] = useState<'intro' | 'main'>('intro');
+
+  useEffect(() => {
+    // Navigate to main page after intro animation completes (5 seconds)
+    const timer = setTimeout(() => {
+      setCurrentPage('main');
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Unified page rendering logic
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case 'intro':
+        return <HelloIntero />;
+      case 'main':
+        return <MainPage />;
+      default:
+        return <HelloIntero />;
+    }
+  };
+
+  return (
+    <div>
+      {renderCurrentPage()}
     </div>
   );
 }

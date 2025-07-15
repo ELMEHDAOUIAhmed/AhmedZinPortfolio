@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
                 {/* Location under name */}
                 <div className="flex items-center mt-2 text-gray-600 dark:text-gray-300 space-x-2">
                   <MapPin className="w-5 h-5" />
-                  <span>Algeria, Algiers</span>
+                  <span>{t.hero.location}</span>
                 </div>
 
                 <div className="flex flex-wrap gap-2">

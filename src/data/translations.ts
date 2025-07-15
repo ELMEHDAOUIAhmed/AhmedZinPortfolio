@@ -11,6 +11,7 @@ export const translations = {
     hero: {
       greeting: 'Hi, My name is',
       name: 'ELMEHDAOUI Ahmed',
+      location: 'Algeria, Algiers',
       chips: [
         'Software Engineer',
         'Mobile & Full-Stack Developer',
@@ -276,6 +277,7 @@ export const translations = {
     hero: {
       greeting: 'Salut, je m\'appelle',
       name: 'ELMEHDAOUI Ahmed',
+      location: 'Algérie, Alger',
       chips: [
         'Ingénieur Logiciel',
         'Développeur Mobile & Full-Stack',
