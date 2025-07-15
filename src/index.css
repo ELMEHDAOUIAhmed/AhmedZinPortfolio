@@ -717,7 +717,7 @@
   }
   
   .dark .text-gray-600 {
-    color: rgb(209 213 219) !important;
+    color: rgb(209, 213, 219) !important;
   }
   
   /* Ensure proper text rendering on mobile */
@@ -771,4 +771,66 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Mobile bottom navigation fixes */
+@media (max-width: 767px) {
+  /* Ensure bottom nav stays truly fixed */
+  nav[class*="fixed bottom-0"] {
+    position: fixed !important;
+    bottom: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    will-change: auto !important;
+  }
+  
+  /* Add padding to body to prevent content overlap */
+  body {
+    padding-bottom: 80px; /* Height of bottom nav + some spacing */
+  }
+  
+  /* Ensure footer/credits have extra margin on mobile */
+  footer, 
+  .footer, 
+  section:last-child,
+  .credits {
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Prevent mobile scroll bounce affecting fixed elements */
+html {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile viewport fixes for consistent bottom positioning */
+@media screen and (max-width: 767px) {
+  /* Disable pull-to-refresh and overscroll */
+  html, body {
+    overscroll-behavior-y: none;
+    -webkit-overscroll-behavior-y: none;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure fixed bottom elements ignore scroll momentum */
+  .bottom-nav-fixed {
+    position: fixed !important;
+    bottom: 0 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Disable scroll momentum on the bottom nav specifically */
+.bottom-nav-fixed * {
+  -webkit-overflow-scrolling: auto !important;
+  overscroll-behavior: none !important;
 }

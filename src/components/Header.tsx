@@ -82,56 +82,58 @@ const Header: React.FC = () => {
       </header>
 
       {/* Mobile Bottom Navigation - Only visible on mobile */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/10 dark:bg-gray-900/10 backdrop-blur-3xl border-t border-white/20 dark:border-gray-700/20 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex items-center justify-between py-3">
-            {/* Logo/Name */}
-            <div className="relative text-lg font-bold text-gray-700 dark:text-gray-200 transition-all duration-300 cursor-default">
-              <span className="relative z-10">AhmedZin.</span>
-            </div>
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bottom-nav-fixed">
+        <nav className="bg-white/10 dark:bg-gray-900/10 backdrop-blur-3xl border-t border-white/20 dark:border-gray-700/20 shadow-2xl">
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
+            <div className="flex items-center justify-between py-3">
+              {/* Logo/Name */}
+              <div className="relative text-lg font-bold text-gray-700 dark:text-gray-200 transition-all duration-300 cursor-default">
+                <span className="relative z-10">AhmedZin.</span>
+              </div>
 
-            {/* Controls */}
-            <div className="flex items-center space-x-3">
-              {/* Language Toggle */}
-              <button
-                onClick={toggleLanguage}
-                className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
-                aria-label="Toggle language"
-              >
-                <span className="text-sm font-bold text-gray-700 dark:text-gray-200 relative z-10">
-                  {language.toUpperCase()}
-                </span>
-              </button>
-              
-              {/* Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
-                aria-label="Toggle theme"
-              >
-                {theme === 'light' ? (
-                  <Moon className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
-                ) : (
-                  <Sun className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
-                )}
-              </button>
+              {/* Controls */}
+              <div className="flex items-center space-x-3">
+                {/* Language Toggle */}
+                <button
+                  onClick={toggleLanguage}
+                  className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
+                  aria-label="Toggle language"
+                >
+                  <span className="text-sm font-bold text-gray-700 dark:text-gray-200 relative z-10">
+                    {language.toUpperCase()}
+                  </span>
+                </button>
+                
+                {/* Theme Toggle */}
+                <button
+                  onClick={toggleTheme}
+                  className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'light' ? (
+                    <Moon className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
+                  ) : (
+                    <Sun className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
+                  )}
+                </button>
 
-              {/* Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
-                aria-label="Toggle menu"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
-                ) : (
-                  <Menu className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
-                )}
-              </button>
+                {/* Menu Button */}
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="relative p-2 rounded-xl bg-white/10 dark:bg-gray-800/10 backdrop-blur-2xl hover:bg-white/20 dark:hover:bg-gray-700/20 transition-all duration-300 border border-white/10 dark:border-gray-700/10"
+                  aria-label="Toggle menu"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
+                  ) : (
+                    <Menu className="w-4 h-4 text-gray-700 dark:text-gray-200 relative z-10" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       {/* Mobile Vertical Menu Popup */}
       {isMobileMenuOpen && (
