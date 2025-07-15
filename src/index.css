@@ -118,7 +118,7 @@
   }
 
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 0.3s ease-out;
   }
 
   .animate-slide-in-left {

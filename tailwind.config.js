@@ -6,7 +6,7 @@ export default {
     extend: {
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
-        'slide-up': 'slideUp 0.8s ease-out',
+        'slide-up': 'slideUp 0.3s ease-out',
         'slide-in-left': 'slideInLeft 0.8s ease-out',
         'slide-in-right': 'slideInRight 0.8s ease-out',
         'liquid-glass': 'liquidGlass 6s ease-in-out infinite',
