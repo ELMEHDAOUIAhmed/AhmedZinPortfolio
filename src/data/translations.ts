@@ -21,7 +21,7 @@ export const translations = {
       ],
       aboutTitle: 'About Me',
       aboutText:
-        "Software engineering student pursuing a Master's in **Software Engineering** at **USTHB**. Specialized in **backend** development with **GoLang** and mobile development with **Flutter**. Currently working on a project developing a mobile driving license **(mDL)** solution with **HB Technologies SPA**, alongside smart IoT system development.",
+        "**Software Engineer** with a Master's degree in **Software Engineering** from **USTHB**. Specialized in **backend** development with **GoLang** and mobile development with **Flutter**. Currently working on a project developing a mobile driving license **(mDL)** solution with **HB Technologies SPA**, alongside smart IoT system development.",
       buttons: {
         previewCV: 'Preview CV',
         downloadCV: 'Download CV',
@@ -287,7 +287,7 @@ export const translations = {
       ],
       aboutTitle: 'À Propos de Moi',
       aboutText:
-        "Étudiant en **ingénierie de logiciels** poursuivant un Master en Software Engineering à l’**USTHB**. Spécialisé en développement **backend** avec **GoLang** et en développement mobile avec **Flutter**. Actuellement impliqué dans un projet de développement d’un permis de conduire mobile **(mDL)** avec **HB Technologies SPA**, en parallèle du développement de systèmes IoT intelligents.",
+        "**Ingénieur Logiciel** diplômé d'un Master en **Ingénierie de Logiciels** de l'**USTHB**. Spécialisé en développement **backend** avec **GoLang** et en développement mobile avec **Flutter**. Actuellement impliqué dans un projet de développement d'un permis de conduire mobile **(mDL)** avec **HB Technologies SPA**, en parallèle du développement de systèmes IoT intelligents.",
       buttons: {
         previewCV: 'Aperçu CV',
         downloadCV: 'Télécharger CV',
