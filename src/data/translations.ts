@@ -264,6 +264,10 @@ export const translations = {
     footer: {
       copyright: '© 2025 ELMEHDAOUI Ahmed. All rights reserved.',
     },
+    acknowledgments: {
+      title: 'Acknowledgments',
+      academicIntegrityText: 'This portfolio was shaped by the inspiration and work of many talented individuals, each of whom contributed in some way, however small. As I\'ve learned in my academic journey, giving proper credit is essential. Plagiarism is not only unethical but also a violation of academic integrity. We must always acknowledge the ideas and words of others using recognized academic citation standards.',
+    },
   },
   fr: {
     nav: {
@@ -528,6 +532,10 @@ export const translations = {
     },
     footer: {
       copyright: '© 2025 ELMEHDAOUI Ahmed. Tous droits réservés.',
+    },
+    acknowledgments: {
+      title: 'Remerciements',
+      academicIntegrityText: 'Ce portfolio a été inspiré par le travail de nombreuses personnes talentueuses, chacune ayant apporté sa contribution, aussi minime soit-elle. Comme je l\'ai appris au cours de mon parcours académique, il est essentiel de citer ses sources. Le plagiat est un acte contraire à l\'intégrité intellectuelle et à l\'éthique académique. Il est impératif de suivre les conventions de citation reconnues pour respecter le travail des autres.',
     },
   },
 };

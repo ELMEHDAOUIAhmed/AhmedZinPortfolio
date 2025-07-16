@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import { useLanguage } from './contexts/LanguageContext';
 import { translations } from './data/translations';
 import HelloIntero from './components/HelloIntero';
+import Acknowledgments from './components/Acknowledgments';
 
 const MainPage: React.FC = () => {
   const { language } = useLanguage();
@@ -26,6 +27,7 @@ const MainPage: React.FC = () => {
         <Showcase />
         <Contributions />
         <Contact />
+        <Acknowledgments />
       </main>
       <footer className="relative bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl text-gray-900 dark:text-white py-6 sm:py-8 border-t border-white/10 dark:border-gray-700/10 shadow-2xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
