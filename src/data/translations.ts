@@ -106,7 +106,7 @@ export const translations = {
           description:
             'ISO 18013-5 compliant digital driving license solution with microservices architecture, GoLang backend, Flutter mobile app, and Python-based facial recognition.',
           technologies: ['GoLang', 'Flutter', 'Python', 'PKI', 'Microservices'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          // githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
         {
           id: '2',
@@ -128,7 +128,7 @@ export const translations = {
           description:
             'Rapid application development project for managing medical records and prescriptions, built in 5 days using Agile methodologies.',
           technologies: ['RAD', 'WinDev', 'Agile', 'Database Management'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
         {
           id: '4',
@@ -136,7 +136,7 @@ export const translations = {
           description:
             'Complete management system for dairy production company including inventory management, purchase orders, and production operations.',
           technologies: ['JavaFX', 'SQL', 'Database Design'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
       ],
     },
@@ -376,7 +376,7 @@ export const translations = {
           description:
             'Solution de permis de conduire numérique conforme ISO 18013-5 avec architecture microservices, backend GoLang, app mobile Flutter, et reconnaissance faciale Python.',
           technologies: ['GoLang', 'Flutter', 'Python', 'PKI', 'Microservices'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          // githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
         {
           id: '2',
@@ -398,7 +398,7 @@ export const translations = {
           description:
             'Projet de développement rapide pour la gestion des dossiers médicaux et ordonnances, construit en 5 jours avec méthodologies Agile.',
           technologies: ['RAD', 'WinDev', 'Base de Données', 'Agile'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
         {
           id: '4',
@@ -406,7 +406,7 @@ export const translations = {
           description:
             'Système de gestion complet pour société de production laitière incluant gestion inventaire, bons de commande, et opérations de production.',
           technologies: ['JavaFX', 'SQL', 'Conception Base de Données'],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
+          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
       ],
     },
