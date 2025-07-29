@@ -190,7 +190,7 @@ export const translations = {
           stats: {
             downloads: '1K+',
             stars: '1',
-            forks: '2'
+            forks: '3'
           }
         }
       ]
@@ -460,7 +460,7 @@ export const translations = {
           stats: {
             downloads: '1K+',
             stars: '1',
-            forks: '2'
+            forks: '3'
           }
         }
       ]
