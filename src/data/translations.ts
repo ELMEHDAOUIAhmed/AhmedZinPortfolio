@@ -35,13 +35,13 @@ export const translations = {
       },
     },
     experience: {
-      title: 'Projects & Experience',
+      title: 'Professional Experience',
       experiences: [
-          {
+        {
           id: '1',
           title: 'Professional Services Engineer',
           company: '[CaptureDoc](http://capturedoc.com/)',
-          timeline: '08/2024 - Today',
+          timeline: '08/2025 - Today',
           description:
             'Business process iteration and automation using advanced technologies to streamline workflows and enhance operational efficiency.',
           technologies: [
@@ -69,11 +69,14 @@ export const translations = {
             'Microservices',
           ],
         },
+      ],
+    },
+    projects: {
+      title: 'Academic & Personal Projects',
+      projects: [
         {
           id: '3',
-          title: 'IoT Bike Rental Mobile App',
-          company: 'USTHB University Graduation Project',
-          timeline: '02/2023 – 05/2023',
+          name: 'IoT Bike Rental Mobile App',
           description:
             'Designed a mobile application with Flutter including an integrated payment system. Authenticated users can rent bikes equipped with smart locks developed with Arduino and Bluetooth.',
           technologies: [
@@ -83,76 +86,29 @@ export const translations = {
             'Payment Integration',
             'IoT',
           ],
+          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/Flutter_startup_bike_rental_app',
         },
         {
           id: '4',
-          title: 'Medical Records Management System',
-          company: 'USTHB University Project',
-          timeline: '04/2022 – 05/2022',
+          name: 'Medical Records Management System',
           description:
             'Developed software in 5 days using RAD tool (WinDev) for frontend and backend, applying Agile methodologies for rapid development.',
           technologies: ['RAD', 'WinDev', 'Agile', 'Database Management'],
         },
         {
           id: '5',
-          title: 'Scientific Club Web Application',
-          company: 'Micro Club - USTHB University',
-          timeline: '05/2022',
+          name: 'Scientific Club Web Application',
           description:
             'Developed a university project with HTML, CSS, JavaScript and PHP to manage a student database, including a registration system with email verification and contact form.',
           technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
+          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/MC2022',
         },
         {
           id: '6',
-          title: 'Dairy Production Management System',
-          company: 'USTHB University Project',
-          timeline: '04/2022 – 05/2022',
+          name: 'Dairy Production Management System',
           description:
             'Developed software in JavaFX with SQL database to manage inventory, purchase orders and production operations for a dairy company.',
           technologies: ['JavaFX', 'SQL', 'Database Design'],
-        },
-      ],
-    },
-    projects: {
-      title: 'Featured Projects',
-      projects: [
-        {
-          id: '1',
-          name: 'Mobile Driving License (mDL)',
-          description:
-            'ISO 18013-5 compliant digital driving license solution with microservices architecture, GoLang backend, Flutter mobile app, and Python-based facial recognition.',
-          technologies: ['GoLang', 'Flutter', 'Python', 'PKI', 'Microservices'],
-          // githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
-        },
-        {
-          id: '2',
-          name: 'IoT Bike Rental System',
-          description:
-            'Smart bike rental mobile application with Arduino-based smart locks, Bluetooth connectivity, and integrated payment system.',
-          technologies: [
-            'Flutter',
-            'Arduino',
-            'Bluetooth',
-            'IoT',
-            'Payment System',
-          ],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/Flutter_startup_bike_rental_app',
-        },
-        {
-          id: '3',
-          name: 'Medical Records Management',
-          description:
-            'Rapid application development project for managing medical records and prescriptions, built in 5 days using Agile methodologies.',
-          technologies: ['RAD', 'WinDev', 'Agile', 'Database Management'],
-          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
-        },
-        {
-          id: '4',
-          name: 'Dairy Production Management',
-          description:
-            'Complete management system for dairy production company including inventory management, purchase orders, and production operations.',
-          technologies: ['JavaFX', 'SQL', 'Database Design'],
-          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
       ],
     },
@@ -321,13 +277,13 @@ export const translations = {
       },
     },
     experience: {
-      title: 'Projets & Expérience',
+      title: 'Expérience Professionnelle',
       experiences: [
         {
           id: '1',
           title: 'Ingénieur Services Professionnels',
           company: '[CaptureDoc](http://capturedoc.com/)',
-          timeline: '08/2024 - Aujourd\'hui',
+          timeline: '08/2025 - Aujourd\'hui',
           description:
             'Itération et automatisation des processus métier en utilisant des technologies avancées pour optimiser les flux de travail et améliorer l\'efficacité opérationnelle.',
           technologies: [
@@ -340,6 +296,8 @@ export const translations = {
           ],
         },
         {
+          id: '2',
+          title: 'Permis de Conduire Mobile (mDL)',
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
@@ -353,11 +311,14 @@ export const translations = {
             'Microservices',
           ],
         },
+      ],
+    },
+    projects: {
+      title: 'Projets Académiques & Personnels',
+      projects: [
         {
-          id: '2',
-          title: 'App Mobile Location de Vélos IoT',
-          company: "Projet de Fin d'Études USTHB",
-          timeline: '02/2023 – 05/2023',
+          id: '3',
+          name: 'App Mobile Location de Vélos IoT',
           description:
             "Conception d'une application mobile avec Flutter comprenant un système de paiement intégré. Les utilisateurs authentifiés peuvent louer des vélos équipés de serrures intelligentes développées avec Arduino et Bluetooth.",
           technologies: [
@@ -367,76 +328,29 @@ export const translations = {
             'Intégration Paiement',
             'IoT',
           ],
+          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/Flutter_startup_bike_rental_app',
         },
         {
-          id: '3',
-          title: 'Système de Gestion des Dossiers Médicaux',
-          company: 'Projet Universitaire USTHB',
-          timeline: '04/2022 – 05/2022',
+          id: '4',
+          name: 'Système de Gestion des Dossiers Médicaux',
           description:
             "Développement d'un logiciel en 5 jours avec un outil RAD (WinDev) pour le frontend et le backend, en appliquant des méthodes Agile pour un développement rapide.",
           technologies: ['RAD', 'WinDev', 'Agile', 'Gestion Base de Données'],
         },
         {
-          id: '4',
-          title: 'Web App Club Scientifique',
-          company: 'Micro Club - USTHB University',
-          timeline: '05/2022',
+          id: '5',
+          name: 'Web App Club Scientifique',
           description:
             "Développement d'un projet universitaire avec HTML, CSS, JavaScript et PHP pour gérer une base de données d'étudiants, incluant un système d'inscriptions avec vérification email et formulaire de contact.",
           technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
+          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/MC2022',
         },
         {
-          id: '5',
-          title: 'Système de Gestion Société Laitière',
-          company: 'Projet Universitaire USTHB',
-          timeline: '04/2022 – 05/2022',
+          id: '6',
+          name: 'Système de Gestion Société Laitière',
           description:
             "Développement d'un logiciel en JavaFX avec base de données SQL pour gérer l'inventaire, les bons de commande et les opérations de production pour une société laitière.",
           technologies: ['JavaFX', 'SQL', 'Conception Base de Données'],
-        },
-      ],
-    },
-    projects: {
-      title: 'Projets Principaux',
-      projects: [
-        {
-          id: '1',
-          name: 'Permis de Conduire Mobile (mDL)',
-          description:
-            'Solution de permis de conduire numérique conforme ISO 18013-5 avec architecture microservices, backend GoLang, app mobile Flutter, et reconnaissance faciale Python.',
-          technologies: ['GoLang', 'Flutter', 'Python', 'PKI', 'Microservices'],
-          // githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
-        },
-        {
-          id: '2',
-          name: 'Système Location Vélos IoT',
-          description:
-            'Application mobile intelligente de location de vélos avec serrures Arduino, connectivité Bluetooth, et système de paiement intégré.',
-          technologies: [
-            'Flutter',
-            'Arduino',
-            'Bluetooth',
-            'IoT',
-            'Système Paiement',
-          ],
-          githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
-        },
-        {
-          id: '3',
-          name: 'Gestion Dossiers Médicaux',
-          description:
-            'Projet de développement rapide pour la gestion des dossiers médicaux et ordonnances, construit en 5 jours avec méthodologies Agile.',
-          technologies: ['RAD', 'WinDev', 'Base de Données', 'Agile'],
-          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
-        },
-        {
-          id: '4',
-          name: 'Gestion Production Laitière',
-          description:
-            'Système de gestion complet pour société de production laitière incluant gestion inventaire, bons de commande, et opérations de production.',
-          technologies: ['JavaFX', 'SQL', 'Conception Base de Données'],
-          //githubUrl: 'https://github.com/ELMEHDAOUIAhmed/',
         },
       ],
     },

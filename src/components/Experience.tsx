@@ -1,7 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { Briefcase, Code, Database, Smartphone, Globe } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { parseMarkdownText } from '../utils/parseMarkdown';
@@ -15,24 +15,16 @@ const Experience: React.FC = () => {
     const icons = [
       <Briefcase className="w-6 h-6" />, // Professional work (id: 1)
       <Briefcase className="w-6 h-6" />, // Professional work (id: 2)
-      <Smartphone className="w-6 h-6" />, // Mobile app
-      <Database className="w-6 h-6" />, // Database/Medical system
-      <Globe className="w-6 h-6" />, // Web application
-      <Code className="w-6 h-6" />, // Software development
     ];
-    return icons[index] || <Code className="w-6 h-6" />;
+    return icons[index] || <Briefcase className="w-6 h-6" />;
   };
 
   const getColorForExperience = (index: number) => {
     const colors = [
       'rgb(255, 255, 0)', // Blue for professional work (id: 1)
       'rgb(33, 150, 243)', // Blue for professional work (id: 2)
-      'rgb(76, 175, 80)', // Green for mobile/IoT
-      'rgb(30, 64, 175)', // Navy blue for medical/database
-      'rgb(255, 152, 0)', // Orange for web
-      'rgb(244, 67, 54)', // Red for software development
     ];
-    return colors[index] || 'rgb(96, 125, 139)';
+    return colors[index] || 'rgb(33, 150, 243)';
   };
 
   return (
