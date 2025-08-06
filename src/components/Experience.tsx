@@ -13,7 +13,8 @@ const Experience: React.FC = () => {
 
   const getIconForExperience = (index: number) => {
     const icons = [
-      <Briefcase className="w-6 h-6" />, // Professional work
+      <Briefcase className="w-6 h-6" />, // Professional work (id: 1)
+      <Briefcase className="w-6 h-6" />, // Professional work (id: 2)
       <Smartphone className="w-6 h-6" />, // Mobile app
       <Database className="w-6 h-6" />, // Database/Medical system
       <Globe className="w-6 h-6" />, // Web application
@@ -24,7 +25,8 @@ const Experience: React.FC = () => {
 
   const getColorForExperience = (index: number) => {
     const colors = [
-      'rgb(33, 150, 243)', // Blue for professional work
+      'rgb(255, 255, 0)', // Blue for professional work (id: 1)
+      'rgb(33, 150, 243)', // Blue for professional work (id: 2)
       'rgb(76, 175, 80)', // Green for mobile/IoT
       'rgb(30, 64, 175)', // Navy blue for medical/database
       'rgb(255, 152, 0)', // Orange for web

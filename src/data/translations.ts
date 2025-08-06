@@ -37,8 +37,24 @@ export const translations = {
     experience: {
       title: 'Projects & Experience',
       experiences: [
-        {
+          {
           id: '1',
+          title: 'Professional Services Engineer',
+          company: '[CaptureDoc](http://capturedoc.com/)',
+          timeline: '08/2024 - Today',
+          description:
+            'Business process iteration and automation using advanced technologies to streamline workflows and enhance operational efficiency.',
+          technologies: [
+            'Automation',
+            'Facial Recognition',
+            'OCR',
+            'Total Agility',
+            'Kofax',
+            'DocuShare',
+          ],
+        },
+        {
+          id: '2',
           title: 'Mobile Driving License (mDL)',
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
@@ -54,7 +70,7 @@ export const translations = {
           ],
         },
         {
-          id: '2',
+          id: '3',
           title: 'IoT Bike Rental Mobile App',
           company: 'USTHB University Graduation Project',
           timeline: '02/2023 – 05/2023',
@@ -69,7 +85,7 @@ export const translations = {
           ],
         },
         {
-          id: '3',
+          id: '4',
           title: 'Medical Records Management System',
           company: 'USTHB University Project',
           timeline: '04/2022 – 05/2022',
@@ -78,7 +94,7 @@ export const translations = {
           technologies: ['RAD', 'WinDev', 'Agile', 'Database Management'],
         },
         {
-          id: '4',
+          id: '5',
           title: 'Scientific Club Web Application',
           company: 'Micro Club - USTHB University',
           timeline: '05/2022',
@@ -87,7 +103,7 @@ export const translations = {
           technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
         },
         {
-          id: '5',
+          id: '6',
           title: 'Dairy Production Management System',
           company: 'USTHB University Project',
           timeline: '04/2022 – 05/2022',
@@ -309,7 +325,21 @@ export const translations = {
       experiences: [
         {
           id: '1',
-          title: 'Permis de Conduire Mobile (mDL)',
+          title: 'Ingénieur Services Professionnels',
+          company: '[CaptureDoc](http://capturedoc.com/)',
+          timeline: '08/2024 - Aujourd\'hui',
+          description:
+            'Itération et automatisation des processus métier en utilisant des technologies avancées pour optimiser les flux de travail et améliorer l\'efficacité opérationnelle.',
+          technologies: [
+            'Automatisation',
+            'Reconnaissance Faciale',
+            'OCR',
+            'Total Agility',
+            'Kofax',
+            'DocuShare',
+          ],
+        },
+        {
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
