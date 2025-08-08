@@ -55,7 +55,7 @@ export const translations = {
         },
         {
           id: '2',
-          title: 'Mobile Driving License (mDL)',
+          title: 'Software Engineering Intern',
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
@@ -297,7 +297,7 @@ export const translations = {
         },
         {
           id: '2',
-          title: 'Permis de Conduire Mobile (mDL)',
+          title: 'Stagiaire en Ingénierie Logicielle',
           company: '[HB Technologies SPA](https://www.hb-technologies.com.dz/en/)',
           timeline: '11/2024 - 07/2025',
           description:
