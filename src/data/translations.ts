@@ -24,7 +24,7 @@ export const translations = {
         "**Software Engineer** with a Master's degree in **Software Engineering** from **USTHB**. Specialized in **backend** development with **GoLang** and mobile development with **Flutter**.",
       buttons: {
         previewCV: 'Preview CV',
-        downloadCV: 'Download CV',
+        contactMe: 'Contact Me',
       },
       modal: {
         title: 'CV Preview',
@@ -268,7 +268,7 @@ export const translations = {
         "**Ingénieur Logiciel** diplômé d'un Master en **Ingénierie de Logiciels** de l'**USTHB**. Spécialisé en développement **backend** avec **GoLang** et en développement mobile avec **Flutter**.",
       buttons: {
         previewCV: 'Aperçu CV',
-        downloadCV: 'Télécharger CV',
+        contactMe: 'Contactez-Moi',
       },
       modal: {
         title: 'Aperçu CV',

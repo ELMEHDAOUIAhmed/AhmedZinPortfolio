@@ -131,9 +131,9 @@ const Hero: React.FC = () => {
                   </div>
                 </button>
 
-                <button
-                  onClick={handleDownloadCV}
-                  className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105"
+                <a
+                  href="mailto:elmehdaoui.ahmed77@gmail.com?subject=Contact%20from%20Portfolio&body=Hello%20Ahmed,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you.%0D%0A%0D%0ABest%20regards"
+                  className="relative flex-1 px-4 py-2.5 sm:px-5 sm:py-3 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl border border-white/30 dark:border-gray-700/30 shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden group hover:scale-105 flex items-center justify-center"
                 >
                   {/* Animated glass background */}
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-blue-700/10 to-blue-800/10"></div>
@@ -143,12 +143,12 @@ const Hero: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                   
                   <div className="relative flex items-center justify-center space-x-2 z-10">
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700 dark:text-blue-400 group-hover:text-blue-800 dark:group-hover:text-blue-300 transition-colors duration-300" />
                     <span className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent group-hover:from-blue-800 group-hover:to-blue-950 transition-all duration-300">
-                      {t.hero.buttons.downloadCV}
+                      {t.hero.buttons.contactMe}
                     </span>
                   </div>
-                </button>
+                </a>
               </div>
 
               {/* Enhanced Social Icons with specific hover colors */}
@@ -179,18 +179,6 @@ const Hero: React.FC = () => {
                   <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 relative z-10" />
                 </a>
                 
-                <a
-                  href="mailto:elmehdaoui.ahmed77@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative p-3 sm:p-3.5 lg:p-4 bg-white/10 dark:bg-black/15 backdrop-blur-3xl rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-white/30 dark:border-gray-700/30 overflow-hidden hover:scale-110"
-                >
-                  {/* Glass background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-yellow-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700 dark:text-gray-300 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors duration-300 relative z-10" />
-                </a>
               </div>
             </div>
 
