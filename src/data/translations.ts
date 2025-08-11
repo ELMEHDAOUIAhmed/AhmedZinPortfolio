@@ -72,7 +72,7 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'Academic & Personal Projects',
+      title: 'Personal Projects',
       projects: [
         {
           id: '3',
@@ -114,7 +114,7 @@ export const translations = {
     },
     showcase: {
       title: 'Portfolio Showcase',
-      subtitle: 'Explore my diverse range of creative works and projects',
+      // subtitle: 'Explore my diverse range of creative works and projects',
       portfolios: [
         {
           id: '1',
@@ -137,9 +137,11 @@ export const translations = {
       ]
     },
     contributions: {
-      title: 'Open Source Contributions',
-      subtitle: 'Community projects and collaborative development',
-      projects: [
+  title: 'Open Source Contributions',
+  viewDetails: 'View details',
+  hideDetails: 'Hide details',
+  // subtitle: 'Community projects and collaborative development',
+  projects: [
         {
           id: '1',
           name: 'Flutter MRZ Scanner Enhanced',
@@ -314,7 +316,7 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'Projets Académiques & Personnels',
+      title: 'Projets Personnels',
       projects: [
         {
           id: '3',
@@ -356,7 +358,7 @@ export const translations = {
     },
     showcase: {
       title: 'Vitrine Portfolio',
-      subtitle: 'Explorez ma gamme diversifiée de travaux créatifs et projets',
+      // subtitle: 'Explorez ma gamme diversifiée de travaux créatifs et projets',
       portfolios: [
         {
           id: '1',
@@ -379,9 +381,11 @@ export const translations = {
       ]
     },
     contributions: {
-      title: 'Contributions Open Source',
-      subtitle: 'Projets communautaires et développement collaboratif',
-      projects: [
+  title: 'Contributions Open Source',
+  viewDetails: 'Voir les détails',
+  hideDetails: 'Masquer les détails',
+  // subtitle: 'Projets communautaires et développement collaboratif',
+  projects: [
         {
           id: '1',
           name: 'Flutter MRZ Scanner Enhanced',

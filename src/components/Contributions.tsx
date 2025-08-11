@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Github, ExternalLink, Star, Download, GitFork, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
@@ -7,6 +7,11 @@ import { getTechColor } from '../utils/techColors';
 const Contributions: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const [expanded, setExpanded] = useState<{[id: string]: boolean}>({});
+
+  const toggleExpand = (id: string) => {
+    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
 
   return (
     <section
@@ -18,23 +23,15 @@ const Contributions: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {t.contributions.title}
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t.contributions.subtitle}
-          </p>
         </div>
-
         <div className="space-y-8">
           {t.contributions.projects.map((project) => (
             <div
               key={project.id}
               className="group relative bg-white/15 dark:bg-gray-900/15 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700/20 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]"
             >
-              {/* Liquid glass background animation */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
               <div className="relative p-6 sm:p-8 z-10">
-                {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 gap-4">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4 gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -44,16 +41,14 @@ const Contributions: React.FC = () => {
                         v{project.pubVersion}
                       </span>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-2 leading-relaxed">
                       {project.description}
                     </p>
-                    <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400 font-medium">
+                    <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400 font-medium mb-2">
                       <TrendingUp className="w-4 h-4" />
                       <span>{project.impact}</span>
                     </div>
                   </div>
-
-                  {/* Action buttons */}
                   <div className="flex gap-3">
                     <a
                       href={project.url}
@@ -71,16 +66,12 @@ const Contributions: React.FC = () => {
                       rel="noopener noreferrer"
                       className="relative p-2 bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all duration-200 hover:scale-110 border border-white/20 dark:border-gray-700/20 overflow-hidden group/github"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-blue-600/10 opacity-0 group-hover/github:opacity-100 transition-opacity duration-300"></div>
                       <Github className="w-5 h-5 relative z-10" />
                     </a>
                   </div>
                 </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-3 gap-4 mb-2">
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-blue-600/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-blue-600 dark:text-blue-400 mb-1">
                         <Download className="w-4 h-4" />
@@ -90,7 +81,6 @@ const Contributions: React.FC = () => {
                     </div>
                   </div>
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-700/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-yellow-600 dark:text-yellow-400 mb-1">
                         <Star className="w-4 h-4" />
@@ -100,7 +90,6 @@ const Contributions: React.FC = () => {
                     </div>
                   </div>
                   <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-3 text-center border border-gray-200/40 dark:border-gray-700/20 overflow-hidden group/stat">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-blue-800/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
                       <div className="flex items-center justify-center gap-1 text-green-600 dark:text-green-400 mb-1">
                         <GitFork className="w-4 h-4" />
@@ -110,32 +99,24 @@ const Contributions: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Technologies */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm border transition-all duration-200 hover:scale-105 ${getTechColor(
-                          tech
-                        )}`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Key Enhancements */}
-                <div className="relative bg-white/30 dark:bg-gray-800/10 backdrop-blur-sm rounded-xl p-4 border border-gray-200/40 dark:border-gray-700/20 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/5 to-blue-600/5"></div>
-                  <div className="relative z-10">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      ✨ Key Enhancements
-                    </h4>
+                <button
+                  className="mt-2 flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium focus:outline-none"
+                  onClick={() => toggleExpand(project.id)}
+                  aria-expanded={!!expanded[project.id]}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <span>{expanded[project.id] ? t.contributions.hideDetails : t.contributions.viewDetails}</span>
+                  <span className={`transition-transform duration-200 ${expanded[project.id] ? 'rotate-90' : ''}`}>▶</span>
+                </button>
+                {expanded[project.id] && (
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Technologies</h4>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm border transition-all duration-200 hover:scale-105 ${getTechColor(tech)}`}>{tech}</span>
+                      ))}
+                    </div>
+                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Key Enhancements</h4>
                     <ul className="space-y-2">
                       {project.enhancements.map((enhancement, index) => (
                         <li key={index} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
@@ -145,14 +126,7 @@ const Contributions: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </div>
-
-                {/* Impact note */}
-                <div className="mt-4 p-3 bg-green-100/80 dark:bg-green-900/50 backdrop-blur-sm border border-green-200/50 dark:border-green-700/50 rounded-xl">
-                  <p className="text-sm text-green-800 dark:text-green-200 font-medium">
-                    💡 This project has been used by many, and I'm proud to have made an impact, especially after the original creator abandoned it and it became outdated.
-                  </p>
-                </div>
+                )}
               </div>
             </div>
           ))}

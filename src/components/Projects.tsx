@@ -9,24 +9,12 @@ const Projects: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
-  const getIconForProject = (index: number) => {
-    const icons = [
-      <Smartphone className="w-8 h-8" />, // IoT Mobile app
-      <Database className="w-8 h-8" />, // Medical/Database system
-      <Globe className="w-8 h-8" />, // Web application
-      <Code className="w-8 h-8" />, // Software development
-    ];
-    return icons[index] || <Code className="w-8 h-8" />;
-  };
-
-  const getColorForProject = (index: number) => {
-    const colors = [
-      'rgb(76, 175, 80)', // Green for mobile/IoT
-      'rgb(30, 64, 175)', // Navy blue for medical/database
-      'rgb(255, 152, 0)', // Orange for web
-      'rgb(244, 67, 54)', // Red for software development
-    ];
-    return colors[index] || 'rgb(96, 125, 139)';
+  const getIconForProject = (project) => {
+    const name = project.name?.toLowerCase() || '';
+    if (name.includes('iot') || name.includes('vélo')) return <Smartphone className="w-8 h-8" />;
+    if (name.includes('medical') || name.includes('médicaux') || name.includes('dairy') || name.includes('laitière')) return <Database className="w-8 h-8" />;
+    if (name.includes('web app') || name.includes('club scientifique')) return <Globe className="w-8 h-8" />;
+    return <Code className="w-8 h-8" />;
   };
 
   return (
@@ -57,10 +45,10 @@ const Projects: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3 flex-1">
                     <div 
-                      className="p-2 sm:p-3 rounded-xl flex-shrink-0 shadow-lg"
-                      style={{ backgroundColor: getColorForProject(index) }}
+                      className="p-2 sm:p-3 rounded-xl flex-shrink-0 shadow-lg bg-blue-100/40 dark:bg-blue-900/30 backdrop-blur-xl border border-blue-300/40 dark:border-blue-700/40 relative overflow-hidden"
                     >
-                      {getIconForProject(index)}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-blue-500/20 to-blue-600/20 opacity-70 pointer-events-none rounded-xl"></div>
+                      {getIconForProject(project)}
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-1">
