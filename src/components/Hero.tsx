@@ -117,11 +117,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              <Tilt
-                tiltMaxAngleX={5}
-                tiltMaxAngleY={5}
-                scale={1.02}
-                transitionSpeed={2000}
+              <div
                 className="relative bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-white/40 dark:border-gray-700/50 shadow-lg"
               >
                 <div className="flex items-center mb-3 sm:mb-4">
@@ -134,11 +130,11 @@ const Hero: React.FC = () => {
                 <div className="text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
                   {parseMarkdownText(t.hero.aboutText)}
                 </div>
-              </Tilt>
+              </div>
 
               {/* Enhanced Compact CV Buttons */}
               <div className="flex flex-row gap-3 sm:gap-4">
-                <Tilt className="flex-1" tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.05}>
+                <div className="flex-1 transition-transform hover:scale-105 duration-300">
                   <button
                     onClick={handlePreviewCV}
                     className="w-full h-full relative px-4 py-2.5 sm:px-5 sm:py-3 bg-white/30 dark:bg-white/5 backdrop-blur-lg rounded-xl border border-white/40 dark:border-gray-600/30 shadow-lg group overflow-hidden"
@@ -151,9 +147,9 @@ const Hero: React.FC = () => {
                       </span>
                     </div>
                   </button>
-                </Tilt>
+                </div>
 
-                <Tilt className="flex-1" tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.05}>
+                <div className="flex-1 transition-transform hover:scale-105 duration-300">
                   <a
                     href="mailto:elmehdaoui.ahmed77@gmail.com?subject=Contact%20from%20Portfolio&body=Hello%20Ahmed,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you.%0D%0A%0D%0ABest%20regards"
                     className="flex items-center justify-center w-full h-full relative px-4 py-2.5 sm:px-5 sm:py-3 bg-white/30 dark:bg-white/5 backdrop-blur-lg rounded-xl border border-white/40 dark:border-gray-600/30 shadow-lg group overflow-hidden"
@@ -166,12 +162,12 @@ const Hero: React.FC = () => {
                       </span>
                     </div>
                   </a>
-                </Tilt>
+                </div>
               </div>
 
               {/* Enhanced Social Icons */}
               <div className="flex justify-center lg:justify-start space-x-3 sm:space-x-4">
-                <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.1}>
+                <div className="transition-transform hover:scale-110 duration-300">
                   <a
                     href="https://github.com/ELMEHDAOUIAhmed/"
                     target="_blank"
@@ -180,9 +176,9 @@ const Hero: React.FC = () => {
                   >
                     <Github className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" />
                   </a>
-                </Tilt>
+                </div>
 
-                <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20} scale={1.1}>
+                <div className="transition-transform hover:scale-110 duration-300">
                   <a
                     href="https://linkedin.com/in/ahmed-elmehdaoui-234182278/"
                     target="_blank"
@@ -191,7 +187,7 @@ const Hero: React.FC = () => {
                   >
                     <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                   </a>
-                </Tilt>
+                </div>
               </div>
             </motion.div>
 
@@ -202,17 +198,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="flex justify-center lg:justify-end order-1 lg:order-2 -mt-8 sm:-mt-12 lg:mt-0"
             >
-              <Tilt
-                tiltMaxAngleX={5}
-                tiltMaxAngleY={5}
-                perspective={1000}
-                glareEnable={true}
-                glareMaxOpacity={0.3}
-                glareColor="#ffffff"
-                glarePosition="all"
-                glareBorderRadius="1.5rem"
-                className="relative"
-              >
+              <div className="relative">
                 {/* Image carousel container */}
                 <div className="relative bg-white/20 dark:bg-white/5 backdrop-blur-2xl rounded-2xl sm:rounded-3xl p-2 border border-white/30 dark:border-gray-700/30 shadow-2xl">
                   <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-inner">
@@ -260,7 +246,7 @@ const Hero: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </Tilt>
+              </div>
             </motion.div>
           </div>
         </div>
