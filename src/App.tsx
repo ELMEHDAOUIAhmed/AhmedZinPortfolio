@@ -15,7 +15,7 @@ import Acknowledgments from './components/Acknowledgments';
 const MainPage: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
       <Header />
@@ -40,6 +40,8 @@ const MainPage: React.FC = () => {
   );
 };
 
+import { motion, AnimatePresence } from 'framer-motion';
+
 function App() {
   const [currentPage, setCurrentPage] = useState<'intro' | 'main'>('intro');
 
@@ -52,22 +54,29 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Unified page rendering logic
-  const renderCurrentPage = () => {
-    switch (currentPage) {
-      case 'intro':
-        return <HelloIntero />;
-      case 'main':
-        return <MainPage />;
-      default:
-        return <HelloIntero />;
-    }
-  };
-
   return (
-    <div>
-      {renderCurrentPage()}
-    </div>
+    <AnimatePresence mode="wait">
+      {currentPage === 'intro' ? (
+        <motion.div
+          key="intro"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <HelloIntero />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="main"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <MainPage />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 
