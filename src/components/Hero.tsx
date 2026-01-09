@@ -83,16 +83,18 @@ const Hero: React.FC = () => {
                   <span className="text-gray-900 dark:text-white">
                     {t.hero.greeting}{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent inline-block">
-                    {t.hero.name}
+                  <span className="whitespace-nowrap">
+                    <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent inline-block">
+                      {t.hero.name}
+                    </span>
+                    <motion.span
+                      animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
+                      transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 1 }}
+                      className="text-gray-900 dark:text-white inline-block ml-2 origin-bottom-right"
+                    >
+                      👋
+                    </motion.span>
                   </span>
-                  <motion.span
-                    animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
-                    transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 1 }}
-                    className="text-gray-900 dark:text-white inline-block ml-2 origin-bottom-right"
-                  >
-                    👋
-                  </motion.span>
                 </h1>
                 {/* Location under name */}
                 <div className="flex items-center mt-2 text-gray-600 dark:text-gray-300 space-x-2">
