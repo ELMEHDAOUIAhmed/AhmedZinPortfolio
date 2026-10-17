@@ -121,7 +121,7 @@ export const translations = {
           name: 'Windows 98 Themed Portfolio',
           description: 'A nostalgic journey through retro computing aesthetics with authentic Windows 98 UI elements, interactive desktop environment, and classic sound effects. Built with vanilla web technologies.',
           url: 'https://my-portfolio-win98-themed.vercel.app/',
-          image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4989c596-7ba0-4e17-8b98-7c338208ab64/daobodr-7dc4c4b1-7bd3-4b50-87bb-c987e2c4dfb7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ5ODljNTk2LTdiYTAtNGUxNy04Yjk4LTdjMzM4MjA4YWI2NFwvZGFvYm9kci03ZGM0YzRiMS03YmQzLTRiNTAtODdiYi1jOTg3ZTJjNGRmYjcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WUgaB8yxHCiYkZyvCl5OVzOA5lVQbOzx_JdIiKMA2Zg',
+          image: 'images/win98.jpg',
           technologies: ['HTML', 'CSS', 'JavaScript', 'Retro Design'],
           category: 'Web Design'
         },
@@ -130,18 +130,18 @@ export const translations = {
           name: 'mDL Mobile App Showcase',
           description: 'Interactive showcase demonstrating mobile driving license (mDL) application features, built with modern React and TypeScript for optimal performance and user experience.',
           url: 'https://elmehdaouiahmed.github.io/mDL-Showcase/',
-          image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
+          image: 'images/mdl.jpg',
           technologies: ['React', 'TypeScript', 'Mobile Design', 'mDL'],
           category: 'Mobile Showcase'
         }
       ]
     },
     contributions: {
-  title: 'Open Source Contributions',
-  viewDetails: 'View details',
-  hideDetails: 'Hide details',
-  // subtitle: 'Community projects and collaborative development',
-  projects: [
+      title: 'Open Source Contributions',
+      viewDetails: 'View details',
+      hideDetails: 'Hide details',
+      // subtitle: 'Community projects and collaborative development',
+      projects: [
         {
           id: '1',
           name: 'Flutter MRZ Scanner Enhanced',
@@ -190,7 +190,7 @@ export const translations = {
         },
         mobile: {
           title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML','CSS', 'JavaScript', 'JavaFX', 'React'],
+          skills: ['Flutter', 'HTML', 'CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
           title: 'Backend & Database',
@@ -365,7 +365,7 @@ export const translations = {
           name: 'Portfolio Thème Windows 98',
           description: 'Un voyage nostalgique à travers l\'esthétique rétro de l\'informatique avec des éléments UI authentiques de Windows 98. Construit avec des technologies web vanilla.',
           url: 'https://my-portfolio-win98-themed.vercel.app/',
-          image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4989c596-7ba0-4e17-8b98-7c338208ab64/daobodr-7dc4c4b1-7bd3-4b50-87bb-c987e2c4dfb7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ5ODljNTk2LTdiYTAtNGUxNy04Yjk4LTdjMzM4MjA4YWI2NFwvZGFvYm9kci03ZGM0YzRiMS03YmQzLTRiNTAtODdiYi1jOTg3ZTJjNGRmYjcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WUgaB8yxHCiYkZyvCl5OVzOA5lVQbOzx_JdIiKMA2Zg',
+          image: 'images/win98.jpg',
           technologies: ['HTML', 'CSS', 'JavaScript', 'Design Rétro'],
           category: 'Design Web'
         },
@@ -374,18 +374,18 @@ export const translations = {
           name: 'Vitrine App Mobile mDL',
           description: 'Vitrine interactive démontrant les fonctionnalités de l\'application de permis de conduire mobile (mDL), construite avec React et TypeScript modernes.',
           url: 'https://elmehdaouiahmed.github.io/mDL-Showcase/',
-          image: 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg',
+          image: 'images/mdl.jpg',
           technologies: ['React', 'TypeScript', 'Design Mobile', 'mDL'],
           category: 'Vitrine Mobile'
         }
       ]
     },
     contributions: {
-  title: 'Contributions Open Source',
-  viewDetails: 'Voir les détails',
-  hideDetails: 'Masquer les détails',
-  // subtitle: 'Projets communautaires et développement collaboratif',
-  projects: [
+      title: 'Contributions Open Source',
+      viewDetails: 'Voir les détails',
+      hideDetails: 'Masquer les détails',
+      // subtitle: 'Projets communautaires et développement collaboratif',
+      projects: [
         {
           id: '1',
           name: 'Flutter MRZ Scanner Enhanced',
@@ -434,7 +434,7 @@ export const translations = {
         },
         mobile: {
           title: 'Mobile & Frontend',
-          skills: ['Flutter', 'HTML','CSS', 'JavaScript', 'JavaFX', 'React'],
+          skills: ['Flutter', 'HTML', 'CSS', 'JavaScript', 'JavaFX', 'React'],
         },
         backend: {
           title: 'Backend & Base de Données',

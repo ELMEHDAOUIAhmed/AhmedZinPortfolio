@@ -8,6 +8,14 @@ const Showcase: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const getImageUrl = (imagePath: string) => {
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+      return imagePath;
+    }
+    const basePath = import.meta.env.BASE_URL || '/';
+    return `${basePath}${imagePath.replace(/^\//, '')}`;
+  };
+
   return (
     <section
       id="showcase"
@@ -18,9 +26,6 @@ const Showcase: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {t.showcase.title}
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {t.showcase.subtitle}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -31,16 +36,19 @@ const Showcase: React.FC = () => {
             >
               {/* Liquid glass background animation */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               {/* Portfolio image */}
               <div className="relative h-48 sm:h-56 overflow-hidden">
                 <img
-                  src={portfolio.image}
+                  src={getImageUrl(portfolio.image)}
                   alt={portfolio.name}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = getImageUrl('dev.png');
+                  }}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Overlay buttons */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a

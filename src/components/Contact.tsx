@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
-import { supabase } from '../lib/supabase';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import type { ContactForm } from '../types';
 
 const Contact: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  
+
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
     message: '',
   });
-  
+
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState<string>('');
 
@@ -23,9 +23,14 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const triggerMailtoFallback = (name: string, message: string) => {
+    const mailtoUrl = `mailto:elmehdaoui.ahmed77@gmail.com?subject=Contact%20from%20Portfolio%20(${encodeURIComponent(name)})&body=${encodeURIComponent(message)}`;
+    window.location.href = mailtoUrl;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       setStatus('error');
       setStatusMessage('Please fill in all fields');
@@ -34,9 +39,21 @@ const Contact: React.FC = () => {
 
     setStatus('sending');
     setStatusMessage('');
-    
+
+    if (!isSupabaseConfigured) {
+      triggerMailtoFallback(formData.name.trim(), formData.message.trim());
+      setStatus('success');
+      setStatusMessage('Opening your email client to send the message...');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 5000);
+      return;
+    }
+
     try {
-      // Save to Supabase only
+      // Save to Supabase
       const { data, error } = await supabase
         .from('portfolio_contact_me')
         .insert([
@@ -51,7 +68,8 @@ const Contact: React.FC = () => {
       if (error) {
         console.error('Supabase error:', error);
         setStatus('error');
-        setStatusMessage('Failed to save your message to our database. Please try again or contact us directly.');
+        setStatusMessage('Database write blocked. Opening mail client fallback...');
+        triggerMailtoFallback(formData.name.trim(), formData.message.trim());
         return;
       }
 
@@ -59,7 +77,7 @@ const Contact: React.FC = () => {
       setStatus('success');
       setStatusMessage('Message sent successfully! We will get back to you shortly.');
       setFormData({ name: '', email: '', message: '' });
-      
+
       // Reset status after 5 seconds
       setTimeout(() => {
         setStatus('idle');
@@ -68,8 +86,9 @@ const Contact: React.FC = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
-      setStatusMessage('An unexpected error occurred. Please try again or contact us directly.');
-      
+      setStatusMessage('Network request blocked. Opening mail client fallback...');
+      triggerMailtoFallback(formData.name.trim(), formData.message.trim());
+
       // Reset status after error to allow retry
       setTimeout(() => {
         setStatus('idle');
@@ -77,6 +96,7 @@ const Contact: React.FC = () => {
       }, 7000);
     }
   };
+
 
   return (
     <section id="contact" className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800 dark:to-blue-900/20 relative overflow-hidden">
@@ -122,7 +142,7 @@ const Contact: React.FC = () => {
                 />
               </div>
             </div>
-            
+
             <div className="mb-3 sm:mb-4 lg:mb-6">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 {t.contact.form.message}

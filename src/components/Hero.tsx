@@ -15,20 +15,20 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import { parseMarkdownText } from '../utils/parseMarkdown';
 import { motion, AnimatePresence } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
-  // Sample images - replace with your actual photos
+  const basePath = import.meta.env.BASE_URL || '/';
   const images = [
-    'https://i.imgur.com/Tge2XIK.jpeg',
-    'https://i.imgur.com/nQQSO72.jpeg',
+    `${basePath}images/profile1.jpg`,
+    `${basePath}images/profile2.jpg`,
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showPdfPreview, setShowPdfPreview] = useState(false);
+
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -207,6 +207,9 @@ const Hero: React.FC = () => {
                         key={currentImageIndex}
                         src={images[currentImageIndex]}
                         alt={`Profile ${currentImageIndex + 1}`}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = `${basePath}dev.png`;
+                        }}
                         initial={{ opacity: 0, scale: 1.1 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0 }}
